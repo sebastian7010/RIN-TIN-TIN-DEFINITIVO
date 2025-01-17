@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos para Gatos</title>
+    <link rel="stylesheet" href="gato.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Productos para Gatos</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+
+                <li>
+                    <a href="https://wa.me/573108853158" class="nav-link" target="_blank" rel="noopener noreferrer">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="search-section">
+            <div class="search-bar-container">
+                <img src="/assets/lupa.svg" alt="Lupa" class="icon-lupa">
+                <input type="text" id="search-bar" class="search-bar" placeholder="Buscar productos para perros...">
+            </div>
+        </section>
+
+        <section class="button-section">
+            <button class="filter-btn" onclick="filterCategory('Accesorios para Gatos')">Accesorios para Gatos</button>
+            <button class="filter-btn" onclick="filterCategory('Comida Premium para Gatos')">Comida Premium para Gatos</button>
+            <button class="filter-btn" onclick="filterCategory('Comida para Gatos')">Comida para Gatos</button>
+            <button class="filter-btn" onclick="filterCategory('Juguetes para Gatos')">Juguetes para Gatos</button>
+        </section>
+
+
+        <section id="product-container" class="product-container">
+            <!-- Productos para gatos generados dinámicamente -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/catalogo/catalogo.html">productos</a></li>
+                    <li><a href="/aboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="https://wa.me/573108853158" target="_blank" rel="noopener noreferrer">contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@miecommerce.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suscríbete</h3>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="../assets/facebook-icon.svg" aria-label="Facebook">
+                        <img src="../assets/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="../assets/instagram-icon.svg" aria-label="Instagram">
+                        <img src="../assets/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="../assets/tiktok-icon.svg" aria-label="TikTok">
+                        <img src="../assets/tiktok-icon.svg" alt="TikTok">
+                    </a>
+                    <a href="../assets/whatsapp-icon.svg" aria-label="WhatsApp">
+                        <img src="../assets/whatsapp-icon.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TOLENTINOS.S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="gato.js"></script>
+</body>
+
+</html>
