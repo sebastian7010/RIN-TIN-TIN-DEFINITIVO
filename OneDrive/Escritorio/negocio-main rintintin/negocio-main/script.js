@@ -29,6 +29,17 @@ function openWhatsApp() {
 }
 
 
+function scrollToCarousels() {
+    const carouselsContainer = document.getElementById('carousels-container'); // Selecciona el contenedor de carruseles
+    if (carouselsContainer) {
+        carouselsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Desplazamiento suave hacia el contenedor
+    } else {
+        console.error('No se encontró el contenedor de carruseles.');
+    }
+}
+
+
+
 
 
 
@@ -45,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const products = [
-        { "id": 1, "categoryId": 1, "name": "Collar para Perro", "price": 45000, "description": "Collar ajustable para perros pequeños y medianos", "image": "https://via.placeholder.com/150?text=Collar" },
+        { "id": 1, "categoryId": 1, "name": "Collar para Perro", "price": 45000, "description": "Collar ajustable para perros pequeños y medianos", "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg" },
         { "id": 2, "categoryId": 1, "name": "Correa para Perro", "price": 25000, "description": "Correa resistente de nylon", "image": "https://via.placeholder.com/150?text=Correa" },
         { "id": 3, "categoryId": 1, "name": "Abrigo para Perro", "price": 80000, "description": "Abrigo impermeable para clima frío", "image": "https://via.placeholder.com/150?text=Abrigo" },
         { "id": 4, "categoryId": 1, "name": "Zapatos para Perro", "price": 50000, "description": "Zapatos antideslizantes para perros", "image": "https://via.placeholder.com/150?text=Zapatos" },
@@ -111,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselsContainer = document.getElementById('carousels-container');
 
     // Función para renderizar productos en carruseles
-    // Función para renderizar productos en carruseles
     function renderProducts(productsToRender) {
         carouselsContainer.innerHTML = ''; // Limpiar el contenedor principal
 
@@ -140,14 +150,14 @@ document.addEventListener('DOMContentLoaded', function() {
             carouselTrack.className = 'carousel-track';
 
             // Dividir productos en páginas de 12
-            const totalPages = Math.ceil(products.length / 12);
+            const totalPages = Math.ceil(products.length / 16);
             for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
                 const page = document.createElement('div');
                 page.className = 'carousel-slide';
                 page.style.display = pageIndex === 0 ? 'grid' : 'none'; // Solo mostrar la primera página
 
-                // Agregar 12 productos por página
-                const productsPage = products.slice(pageIndex * 12, (pageIndex + 1) * 12);
+                // Agregar 16 productos por página
+                const productsPage = products.slice(pageIndex * 16, (pageIndex + 1) * 16);
                 productsPage.forEach(product => {
                     const productCard = document.createElement('div');
                     productCard.className = 'product-card';

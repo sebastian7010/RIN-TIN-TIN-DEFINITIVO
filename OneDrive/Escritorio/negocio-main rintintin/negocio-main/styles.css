@@ -87,7 +87,6 @@ body {
 }
 
 .main-content {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
@@ -120,6 +119,8 @@ body {
     padding: 5px;
     border-radius: 30px;
     text-decoration: none;
+    margin-left: 350px;
+    margin-right: 350px;
     /* Quita el subrayado */
 }
 
@@ -160,6 +161,8 @@ body {
     padding: 30px;
     border: none;
     outline: none;
+    margin-left: 350px;
+    margin-right: 350px;
 }
 
 .cta-title {
@@ -821,12 +824,21 @@ body {
 
 /* Cada slide contiene su .product-grid con 12 productos */
 
+
+/* Estilo para las páginas del carrusel */
+
 .carousel-slide {
-    display: none;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 20px;
-    padding: 0 20px;
-    /* Espacio interno opcional para los bordes */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* 8 columnas */
+    grid-template-rows: repeat(2, auto);
+    /* 2 filas */
+    gap: 15px;
+    /* Espaciado entre tarjetas */
+    padding: 20px;
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box;
 }
 
 
