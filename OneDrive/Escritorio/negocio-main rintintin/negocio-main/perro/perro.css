@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 /* General Styles */
 
 html,
@@ -15,7 +22,7 @@ body {
 }
 
 .header {
-    background-color: #128c7e;
+    background-color: #4FC3F7;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -28,21 +35,82 @@ body {
     font-weight: bold;
 }
 
-.navbar ul {
-    list-style: none;
+.navbar {
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: 1650px;
+    height: 60px;
 }
 
-.nav-link {
+.navbar h1 {
+    position: absolute;
+    /* Permite que el título esté en el centro absoluto */
+    left: 50%;
+    /* Posiciona en el centro horizontal */
+    transform: translateX(-50%);
+    /* Ajusta el desplazamiento para centrar exactamente */
+    font-size: 24px;
+    /* Tamaño del texto del título */
     color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    /* Color del texto */
+    margin: 0;
 }
 
-.nav-link:hover {
-    color: #f9f871;
+.navbar ul {
+    display: flex;
+    /* Diseño en línea para los enlaces */
+    list-style: none;
+    /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    /* Espaciado entre los enlaces */
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    position: relative;
+    /* Para posicionar la línea blanca */
+    text-decoration: none;
+    /* Sin subrayado */
+    color: white;
+    /* Color del texto */
+    font-size: 18px;
+    /* Tamaño del texto */
+    transition: color 0.3s ease;
+    /* Transición para el texto */
+}
+
+
+/* Línea blanca animada */
+
+.navbar ul li a::after {
+    content: "";
+    /* Elemento decorativo */
+    position: absolute;
+    /* Posiciona relativo al enlace */
+    bottom: -5px;
+    /* Justo debajo del texto */
+    left: 0;
+    /* Empieza desde la izquierda */
+    width: 0;
+    /* Inicialmente sin ancho */
+    height: 2px;
+    /* Altura de la línea */
+    background-color: white;
+    /* Color de la línea */
+    transition: width 0.3s ease;
+    /* Animación suave del ancho */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    /* Se extiende completamente en hover */
 }
 
 .main-content {
@@ -70,7 +138,7 @@ body {
 }
 
 .search-bar:focus {
-    border-color: #128c7e;
+    border-color: #4FC3F7;
     outline: none;
 }
 
@@ -174,7 +242,7 @@ footer {
 }
 
 .filter-btn {
-    background-color: #128c7e;
+    background-color: #25d366;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -185,7 +253,7 @@ footer {
 }
 
 .filter-btn:hover {
-    background-color: #0f705f;
+    background-color: #25d366;
     transform: scale(1.05);
 }
 

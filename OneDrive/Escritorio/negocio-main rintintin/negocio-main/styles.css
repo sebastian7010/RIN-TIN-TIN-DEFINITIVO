@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +11,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #ffffff;
 }
 
 .header {
-    background-color: #128c7e;
+    background-color: #4FC3F7;
     padding: -0.5rem;
     display: flex;
     align-items: center;
@@ -627,11 +632,11 @@ body {
     0%,
     100% {
         transform: scale(1);
-        box-shadow: 0px 8px 15px rgba(255, 69, 0, 0.5);
+        box-shadow: 0px 8px 15px rgba(0, 132, 255, 0.5);
     }
     50% {
         transform: scale(1.1);
-        box-shadow: 0px 12px 20px rgba(255, 69, 0, 0.7);
+        box-shadow: 0px 12px 20px rgba(0, 132, 255, 0.5);
     }
 }
 
@@ -900,11 +905,11 @@ body {
 }
 
 .prev-btn {
-    left: 10px;
+    left: 20px;
 }
 
 .next-btn {
-    right: 10px;
+    right: 20px;
 }
 
 .nav-btn svg {

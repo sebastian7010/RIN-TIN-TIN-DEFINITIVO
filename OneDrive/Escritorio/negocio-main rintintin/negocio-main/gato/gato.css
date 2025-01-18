@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+html,
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
 /* General Styles */
 
 html,
@@ -24,25 +31,59 @@ body {
 }
 
 .title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
+    /* Asegúrate de usar un color adecuado para tu diseño */
+    text-align: center;
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    margin-left: 1650px;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
     font-size: 1rem;
+    position: relative;
+    /* Necesario para posicionar la pseudo-clase ::after */
     transition: color 0.3s ease;
+    /* Efecto suave para el cambio de color del texto */
 }
 
-.nav-link:hover {
-    color: #f9f871;
+.nav-link::after {
+    content: '';
+    /* Genera un elemento vacío */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    /* Ubica la línea justo debajo del texto */
+    width: 100%;
+    /* La línea ocupa todo el ancho del enlace */
+    height: 3px;
+    /* Grosor de la línea */
+    background-color: white;
+    /* Color de la línea */
+    transform: scaleX(0);
+    /* Oculta la línea inicialmente */
+    transform-origin: right;
+    /* La animación comienza desde la derecha */
+    transition: transform 0.3s ease-in-out;
+    /* Anima la expansión de la línea */
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+    /* Expande la línea completamente al hacer hover */
+    transform-origin: left;
+    /* La animación se expande hacia la izquierda */
 }
 
 .main-content {
@@ -174,7 +215,7 @@ footer {
 }
 
 .filter-btn {
-    background-color: #128c7e;
+    background-color: #25d366;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -185,7 +226,7 @@ footer {
 }
 
 .filter-btn:hover {
-    background-color: #0f705f;
+    background-color: #25d366;
     transform: scale(1.05);
 }
 
