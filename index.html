@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Market</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <img src="assets/noun-dog-and-cat-5844537.svg" alt="Rin Tin Tin Logo" class="logo">
+        <h1 class="title">RIN TIN TIN</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="catalogo/catalogo.html" class="nav-link">Catálogo</a></li>
+                <li> <a href="https://wa.me/573108853158" class="nav-link" target="_blank" rel="noopener noreferrer">Contacto</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link cart"><img src="assets/noun-phone-7377179.svg" alt="Carrito" class="cart-icon"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="cta-container">
+            <a href="#" class="cta-button whatsapp" onclick="openWhatsApp()">
+                <span class="cta-title">COMPRA EN</span>
+                <img src="assets/noun-whatsapp-6843546.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+                <span class="cta-text">
+                    RESPONDEMOS EN<br>
+                    MENOS 2 MINUTOS
+                </span>
+            </a>
+
+
+            <button class="cta-button clicks" onclick="scrollToCarousels()">
+                COMPRA EN<br>
+                2 CLICKS
+            </button>
+
+            <section class="search-section">
+                <div class="search-bar-container">
+                    <img src="assets/lupa.svg" alt="Lupa" class="icon-lupa">
+                    <input type="text" id="search-bar" class="search-bar" placeholder="Buscar productos para perros y gatos">
+                </div>
+            </section>
+
+
+        </div>
+
+        <section class="pet-selection">
+            <h2 class="section-title">¿TIENES UN PERRO O GATO?</h2>
+            <div class="pet-images">
+                <div class="pet-images">
+                    <div class="pet-image-container">
+                        <a href="perro/perro.html">
+                            <img src="assets/perro.jpeg" alt="Perro con gafas" class="pet-image">
+                        </a>
+                    </div>
+                    <div class="pet-image-container">
+                        <a href="gato/gato.html">
+                            <img src="assets/gato.jpeg" alt="Gato sonriente" class="pet-image">
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+        <section class="carousel-section">
+            <div id="carousels-container"></div>
+        </section>
+
+    </main>
+
+    <div id="floating-cart" class="floating-cart" onclick="sendCartToWhatsApp()">
+        <img src="assets/noun-purchase-2804281.svg" alt="Carrito" class="cart-icon">
+        <span id="cart-count" class="cart-count">0</span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./catalogo/catalogo.html">productos</a></li>
+                    <li><a href="./aboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="https://wa.me/573108853158" target="_blank" rel="noopener noreferrer">contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-phone"></i> +57 3108853158</p>
+                <p><i class="fas fa-envelope"></i> info@miecommerce.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suscríbete</h3>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="./assets/facebook-icon.svg" aria-label="Facebook">
+                        <img src="./assets/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="./assets/instagram-icon.svg" aria-label="Instagram">
+                        <img src="./assets/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="./assets/tiktok-icon.svg" aria-label="TikTok">
+                        <img src="./assets/tiktok-icon.svg" alt="TikTok">
+                    </a>
+                    <a href="./assets/whatsapp-icon.svg" aria-label="WhatsApp">
+                        <img src="./assets/whatsapp-icon.svg" alt="WhatsApp">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TOLENTINOS.S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="categories.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Pet Market</title>
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <img src="assets/noun-dog-and-cat-5844537.svg" alt="Rin Tin Tin Logo" class="logo">
+        <h1 class="title">Pet Market - Catálogo</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+
+                <li>
+                    <a href="https://wa.me/573108853158" class="nav-link" target="_blank" rel="noopener noreferrer">Contacto</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Barra de búsqueda y filtros -->
+    <section class="search-filters">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar productos..." />
+            <button id="search-button">Buscar</button>
+        </div>
+
+        <div class="filters">
+            <h3>Filtrar por:</h3>
+            <div class="filter-category">
+                <label for="category-select">Categoría:</label>
+                <select id="category-select">
+                    <option value="all">Todas</option>
+                    <option value="1">Accesorios para Perros</option>
+                    <option value="2">Alimentos para Perros</option>
+                    <option value="3">Juguetes para Perros</option>
+                    <option value="4">Accesorios para Gatos</option>
+                    <option value="5">Alimentos para Gatos</option>
+                    <option value="6">Juguetes para Gatos</option>
+                    <option value="7">Accesorios para Aves</option>
+                    <option value="8">Accesorios para Peces</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listado de productos -->
+    <section class="catalog">
+        <div id="product-grid" class="product-grid">
+            <!-- Aquí se insertarán las tarjetas de productos dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Paginación -->
+    <section class="pagination">
+        <button id="prev-page" disabled>Anterior</button>
+        <span id="current-page">1</span>
+        <button id="next-page">Siguiente</button>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="/catalogo/catalogo.html">productos</a></li>
+                    <li><a href="/aboutUs/aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="https://wa.me/573108853158" target="_blank" rel="noopener noreferrer">contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calle Principal 123, Ciudad</p>
+                <p><i class="fas fa-phone"></i> +57 300 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@miecommerce.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suscríbete</h3>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="../assets/facebook-icon.svg" aria-label="Facebook">
+                        <img src="../assets/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="../assets/instagram-icon.svg" aria-label="Instagram">
+                        <img src="../assets/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="../assets/tiktok-icon.svg" aria-label="TikTok">
+                        <img src="../assets/tiktok-icon.svg" alt="TikTok">
+                    </a>
+                    <a href="../assets/whatsapp-icon.svg" aria-label="WhatsApp">
+                        <img src="../assets/whatsapp-icon.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TOLENTINOS.S.A.S. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="catalogo.js"></script>
+</body>
+
+</html>

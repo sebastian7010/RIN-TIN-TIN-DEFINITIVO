@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* General Styles */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #4FC3F7;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: 1650px;
+    height: 60px;
+}
+
+.navbar h1 {
+    position: absolute;
+    /* Permite que el título esté en el centro absoluto */
+    left: 50%;
+    /* Posiciona en el centro horizontal */
+    transform: translateX(-50%);
+    /* Ajusta el desplazamiento para centrar exactamente */
+    font-size: 24px;
+    /* Tamaño del texto del título */
+    color: white;
+    /* Color del texto */
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    /* Diseño en línea para los enlaces */
+    list-style: none;
+    /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    /* Espaciado entre los enlaces */
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    position: relative;
+    /* Para posicionar la línea blanca */
+    text-decoration: none;
+    /* Sin subrayado */
+    color: white;
+    /* Color del texto */
+    font-size: 18px;
+    /* Tamaño del texto */
+    transition: color 0.3s ease;
+    /* Transición para el texto */
+}
+
+
+/* Línea blanca animada */
+
+.navbar ul li a::after {
+    content: "";
+    /* Elemento decorativo */
+    position: absolute;
+    /* Posiciona relativo al enlace */
+    bottom: -5px;
+    /* Justo debajo del texto */
+    left: 0;
+    /* Empieza desde la izquierda */
+    width: 0;
+    /* Inicialmente sin ancho */
+    height: 2px;
+    /* Altura de la línea */
+    background-color: white;
+    /* Color de la línea */
+    transition: width 0.3s ease;
+    /* Animación suave del ancho */
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+    /* Se extiende completamente en hover */
+}
+
+.main-content {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Search Bar */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #4FC3F7;
+    outline: none;
+}
+
+
+/* Product Container */
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Coloca tarjetas individuales en filas */
+    gap: 20px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas en su columna */
+    padding: 10px;
+    /* Espacio interno del contenedor */
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    /* Borde gris claro */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    /* Ancho fijo de cada tarjeta */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente al pasar el cursor */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra más pronunciada */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-details p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.buy-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.buy-btn:hover {
+    background-color: #45a049;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #128c7e;
+}
+
+footer {
+    background-color: #128c7e;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #25d366;
+    transform: scale(1.05);
+}
+
+
+/* Estilos del footer */
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-bottom: 20px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffd700;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: #ffd700;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #ffea00;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    /* Ajusta el tamaño según lo necesario */
+    height: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    /* Efecto de escala al pasar el cursor */
+    filter: brightness(1.5);
+    /* Hace que el ícono sea más brillante */
+}
+
+.search-bar-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    /* Ajusta el ancho según tu diseño */
+    margin: 1rem auto;
+    /* Centra la barra de búsqueda con un margen */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: #fff;
+}
+
+.icon-lupa {
+    width: 30px;
+    /* Tamaño del ícono */
+    height: 30px;
+    margin-right: 10px;
+    /* Espacio entre la lupa y el input */
+    flex-shrink: 0;
+    /* Evita que el ícono se deforme */
+}
+
+.search-bar {
+    flex: 1;
+    /* Ocupa el espacio restante */
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
