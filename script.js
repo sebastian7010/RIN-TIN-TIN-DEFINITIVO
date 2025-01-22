@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const products = [
         { "id": 1, "categoryId": 1, "name": "Collar para Perro", "price": 45000, "description": "Collar ajustable para perros pequeños y medianos", "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg" },
-        { "id": 2, "categoryId": 1, "name": "Correa para Perro", "price": 25000, "description": "Correa resistente de nylon", "image": "https://via.placeholder.com/150?text=Correa" },
+        { "id": 2, "categoryId": 1, "name": "Correa para Perro", "price": 25000, "description": "Correa resistente de nylon", "image": "https://th.bing.com/th/id/R.d8d9acae7b5e907b3d617507fc89188c?rik=E9nJq3VYJdC4UA&pid=ImgRaw&r=0" },
         { "id": 3, "categoryId": 1, "name": "Abrigo para Perro", "price": 80000, "description": "Abrigo impermeable para clima frío", "image": "https://via.placeholder.com/150?text=Abrigo" },
         { "id": 4, "categoryId": 1, "name": "Zapatos para Perro", "price": 50000, "description": "Zapatos antideslizantes para perros", "image": "https://via.placeholder.com/150?text=Zapatos" },
         { "id": 5, "categoryId": 1, "name": "Sombrero para Perro", "price": 30000, "description": "Sombrero divertido para perros", "image": "https://via.placeholder.com/150?text=Sombrero" },
@@ -380,3 +380,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.addEventListener('DOMContentLoaded', () => {});
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mainFab = document.getElementById('main-fab');
+    const fabSocialLinks = document.getElementById('fab-social-links');
+
+    mainFab.addEventListener('click', function() {
+        // Agregar animación de giro
+        mainFab.classList.add('rotate');
+
+        // Quitar la clase después de la animación para que pueda repetirse
+        setTimeout(() => {
+            mainFab.classList.remove('rotate');
+        }, 500); // Duración de la animación en ms
+
+        // Mostrar u ocultar las redes sociales
+        fabSocialLinks.classList.toggle('active');
+    });
+});

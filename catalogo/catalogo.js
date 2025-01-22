@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // CategoryId: 3 - Juguetes para Perros
         { id: 21, categoryId: 3, name: "Pelota de Goma", price: 10.0, description: "Pelota resistente ideal para juegos de lanzar", image: "https://via.placeholder.com/150" },
-        { id: 22, categoryId: 3, name: "Juguete Mordedor", price: 12.0, description: "Juguete ideal para la dentición", image: "https://via.placeholder.com/150" },
+        { id: 22, categoryId: 3, name: "Juguete Mordedor", price: 12.0, description: "Juguete ideal para la dentición", image: "https://http2.mlstatic.com/D_NQ_NP_2X_671435-MLC40332329867_012020-F.jpg" },
         { id: 23, categoryId: 3, name: "Disco Volador", price: 15.0, description: "Disco para juegos al aire libre", image: "https://via.placeholder.com/150" },
         { id: 24, categoryId: 3, name: "Juguete de Peluche", price: 18.0, description: "Peluche suave para juegos y compañía", image: "https://via.placeholder.com/150" },
         { id: 25, categoryId: 3, name: "Juguete de Cuerda", price: 8.0, description: "Cuerda ideal para juegos de tirar y masticar", image: "https://via.placeholder.com/150" },
