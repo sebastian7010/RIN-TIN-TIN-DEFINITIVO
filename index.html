@@ -12,26 +12,30 @@
 
 <body>
     <header class="header">
-        <img src="assets/noun-dog-and-cat-5844537.svg" alt="Rin Tin Tin Logo" class="logo">
-        <h1 class="title">RIN TIN TIN</h1>
+        <div class="logo-title-container">
+            <img src="path/to/logo.png" alt="Logo" class="logo">
+            <h1 class="title">Pet Market</h1>
+        </div>
         <nav class="navbar">
             <ul>
-                <li><a href="catalogo/catalogo.html" class="nav-link">Catálogo</a></li>
+                <li>
+                    <a href="catalogo/catalogo.html" class="nav-link">Catálogo</a>
+                </li>
             </ul>
         </nav>
     </header>
+
 
     <main class="main-content">
         <div class="cta-container">
             <a href="#" class="cta-button whatsapp" onclick="openWhatsApp()">
                 <span class="cta-title">COMPRA EN</span>
-                <img src="assets/noun-whatsapp-6843546.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+                <img src="./assets/whatsapp-icon.svg" alt="WhatsApp Icon" class="whatsapp-icon">
                 <span class="cta-text">
                     RESPONDEMOS EN<br>
                     MENOS 2 MINUTOS
                 </span>
             </a>
-
 
             <button class="cta-button clicks" onclick="scrollToCarousels()">
                 COMPRA EN<br>
@@ -70,30 +74,6 @@
         </section>
 
     </main>
-
-    <div id="social-media-fab" class="social-media-fab">
-        <button id="main-fab" class="fab-button">
-            <img src="assets/send-paper-svgrepo-com.svg" alt="Share Icon" class="fab-icon">
-        </button>
-        <div id="fab-social-links" class="fab-social-links">
-            <a href="https://www.instagram.com/" target="_blank" class="fab-link instagram">
-                <img src="assets/instagram1.svg" alt="Instagram" class="fab-icon">
-            </a>
-            <a href="https://wa.me/" target="_blank" class="fab-link whatsapp">
-                <img src="assets/whatsapp1.svg" alt="WhatsApp" class="fab-iconw">
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank" class="fab-link tiktok">
-                <img src="assets/tiktok-icon.svg" alt="TikTok" class="fab-icon">
-            </a>
-            <a href="https://www.facebook.com/" target="_blank" class="fab-link facebook">
-                <img src="assets/facebook-svgrepo-com.svg" alt="Facebook" class="fab-icon">
-            </a>
-        </div>
-    </div>
-
-
-
-
 
     <div id="floating-cart" class="floating-cart" onclick="sendCartToWhatsApp()">
         <img src="assets/noun-purchase-2804281.svg" alt="Carrito" class="cart-icon">
