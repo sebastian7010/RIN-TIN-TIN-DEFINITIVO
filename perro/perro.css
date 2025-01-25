@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    background-color: #4FC3F7;
+    background-color: #021A1A;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -40,7 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    margin-left: 1650px;
+    margin-left: 1590px;
     height: 60px;
 }
 
@@ -74,43 +74,24 @@ body {
 }
 
 .navbar ul li a {
-    position: relative;
-    /* Para posicionar la línea blanca */
     text-decoration: none;
-    /* Sin subrayado */
-    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #00df82;
+    /* Fondo del botón */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    color: black;
     /* Color del texto */
-    font-size: 18px;
-    /* Tamaño del texto */
-    transition: color 0.3s ease;
-    /* Transición para el texto */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-
-/* Línea blanca animada */
-
-.navbar ul li a::after {
-    content: "";
-    /* Elemento decorativo */
-    position: absolute;
-    /* Posiciona relativo al enlace */
-    bottom: -5px;
-    /* Justo debajo del texto */
-    left: 0;
-    /* Empieza desde la izquierda */
-    width: 0;
-    /* Inicialmente sin ancho */
-    height: 2px;
-    /* Altura de la línea */
-    background-color: white;
-    /* Color de la línea */
-    transition: width 0.3s ease;
-    /* Animación suave del ancho */
-}
-
-.navbar ul li a:hover::after {
-    width: 100%;
-    /* Se extiende completamente en hover */
+.navbar ul li a:hover {
+    transform: scale(1.1);
+    background-color: #2CC295;
+    /* Cambia el color de fondo al pasar el mouse */
+    color: white;
+    /* Opcional: cambia el color del texto */
 }
 
 .main-content {
@@ -201,7 +182,7 @@ body {
 }
 
 .buy-btn {
-    background-color: #4CAF50;
+    background-color: #00DF82;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -215,7 +196,7 @@ body {
 }
 
 .buy-btn:hover {
-    background-color: #45a049;
+    background-color: #2cc295;
 }
 
 .product-price {
@@ -242,7 +223,7 @@ footer {
 }
 
 .filter-btn {
-    background-color: #25d366;
+    background-color: #2CC295;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -253,7 +234,7 @@ footer {
 }
 
 .filter-btn:hover {
-    background-color: #25d366;
+    background-color: #00df82;
     transform: scale(1.05);
 }
 

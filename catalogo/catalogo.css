@@ -32,7 +32,7 @@ body {
 /* Encabezado */
 
 .header {
-    background-color: #128c7e;
+    background-color: #021A1A;
     color: white;
     padding: 1rem 2rem;
     display: flex;
@@ -50,21 +50,39 @@ body {
 }
 
 .navbar ul {
-    list-style: none;
     display: flex;
-    gap: 1.5rem;
+    /* Diseño en línea para los enlaces */
+    list-style: none;
+    /* Sin viñetas */
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    /* Espaciado entre los enlaces */
 }
 
-.nav-link {
-    color: white;
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #00df82;
+    /* Fondo del botón */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    color: black;
+    /* Color del texto */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    border-bottom: 2px solid white;
+.navbar ul li a:hover {
+    transform: scale(1.1);
+    background-color: #2CC295;
+    /* Cambia el color de fondo al pasar el mouse */
+    color: white;
+    /* Opcional: cambia el color del texto */
 }
 
 .cart-icon {
@@ -118,7 +136,7 @@ body {
 }
 
 #search-button {
-    background-color: #128c7e;
+    background-color: #2cc295;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -129,7 +147,7 @@ body {
 }
 
 #search-button:hover {
-    background-color: #0e6d5c;
+    background-color: #00df82;
 }
 
 .filters {
@@ -200,7 +218,7 @@ body {
 }
 
 .buy-btn {
-    background-color: #128c7e;
+    background-color: #2cc295;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -211,7 +229,7 @@ body {
 }
 
 .buy-btn:hover {
-    background-color: #0e6d5c;
+    background-color: #00df82;
 }
 
 
@@ -226,7 +244,7 @@ body {
 }
 
 .pagination button {
-    background-color: #128c7e;
+    background-color: #00df82;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
