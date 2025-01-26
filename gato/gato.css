@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    background-color: #021A1A;
+    background-color: #252523;
     color: white;
     padding: 2rem 2rem;
     display: flex;
@@ -67,16 +67,10 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
-    background-color: #00df82;
+    background-color: #ff7300;
     border-radius: 0.5rem;
     color: black;
     transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    transform: scale(1.1);
-    background-color: #2CC295;
-    color: white;
 }
 
 .navbar h1 {
@@ -110,7 +104,7 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
-    background-color: #00df82;
+    background-color: #ff7300;
     /* Fondo del botón */
     border-radius: 0.5rem;
     /* Bordes redondeados */
@@ -121,7 +115,7 @@ body {
 
 .navbar ul li a:hover {
     transform: scale(1.1);
-    background-color: #2CC295;
+    background-color: #fe5800;
     /* Cambia el color de fondo al pasar el mouse */
     color: white;
     /* Opcional: cambia el color del texto */
@@ -256,7 +250,7 @@ footer {
 }
 
 .filter-btn {
-    background-color: #2CC295;
+    background-color: #ff7300;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -267,7 +261,7 @@ footer {
 }
 
 .filter-btn:hover {
-    background-color: #00df82;
+    background-color: #fe5800;
     transform: scale(1.05);
 }
 

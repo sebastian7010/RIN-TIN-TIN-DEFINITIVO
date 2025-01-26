@@ -226,11 +226,8 @@ body {
 
 .whatsapp-icon {
     width: 5rem!important;
-    /* Aumenta el ancho con prioridad */
     height: 5rem!important;
-    /* Aumenta la altura con prioridad */
     object-fit: contain;
-    /* Asegura que la proporción se mantenga */
     margin: -1.5rem;
 }
 
@@ -260,11 +257,9 @@ body {
     font-weight: bold;
     border-radius: 2rem;
     padding: 1em;
-    /* Espaciado relativo */
     width: 80%;
-    /* Ajuste relativo */
     max-width: 20rem;
-    /* Limita el ancho */
+    /* Limita el  */
 }
 
 .cta-title {
