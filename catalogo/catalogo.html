@@ -11,7 +11,7 @@
 <body>
     <!-- Encabezado -->
     <header class="header">
-        <img src="assets/noun-dog-and-cat-5844537.svg" alt="Rin Tin Tin Logo" class="logo">
+        <img src="../assets/pets-hotel-symbol-with-a-dog-and-a-cat-in-a-circle-with-one-star-svgrepo-com.svg" alt="Rin Tin Tin Logo" class="logo">
         <h1 class="title">GATON Y PERRON - Catálogo</h1>
         <nav class="navbar">
             <ul>
@@ -57,6 +57,11 @@
             <!-- Aquí se insertarán las tarjetas de productos dinámicamente -->
         </div>
     </section>
+
+    <div id="floating-cart" class="floating-cart" onclick="sendCartToWhatsApp()">
+        <img src="../assets/noun-purchase-2804281.svg" alt="Carrito" class="cart-icon">
+        <span id="cart-count" class="cart-count">0</span>
+    </div>
 
     <!-- Paginación -->
     <section class="pagination">
@@ -112,6 +117,8 @@
         </div>
     </footer>
 
+
+    <script src="https://unpkg.com/fuse.js/dist/fuse.js"></script>
     <script src="catalogo.js"></script>
 </body>
 

@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <h1 class="navbar-title">Productos para Gatos</h1>
+            <h1 class="navbar-title">Productos para Perros</h1>
             <ul>
                 <li><a href="../index.html" class="nav-link">Inicio</a></li>
                 <li><a href="https://wa.me/573108853158" class="nav-link" target="_blank" rel="noopener noreferrer">Contacto</a></li>
@@ -32,20 +32,20 @@
         </section>
     </main>
 
-
     <section class="button-section">
         <button class="filter-btn" onclick="filterCategory('Accesorios para Perros')">Accesorios para Perros</button>
-        <button class="filter-btn" onclick="filterCategory('Comida Premium para Perros')">Comida Premium para Perros</button>
-        <button class="filter-btn" onclick="filterCategory('Comida para Perros')">Comida para Perros</button>
+        <button class="filter-btn" onclick="filterCategory('Comida premium para perros')">Comida Premium para Perros</button>
+        <button class="filter-btn" onclick="filterCategory('Comida para perros')">Comida para Perros</button>
         <button class="filter-btn" onclick="filterCategory('Juguetes para Perros')">Juguetes para Perros</button>
     </section>
 
+    <div id="carousels-container"></div>
 
 
-    <section id="product-container" class="product-container">
-        <!-- Productos se generarán dinámicamente aquí -->
-    </section>
-    </main>
+    <div id="floating-cart" class="floating-cart" onclick="sendCartToWhatsApp()">
+        <img src="../assets/noun-purchase-2804281.svg" alt="Carrito" class="cart-icon">
+        <span id="cart-count" class="cart-count">0</span>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -94,8 +94,7 @@
         </div>
     </footer>
 
-
-
+    <script src="https://unpkg.com/fuse.js/dist/fuse.js"></script>
     <script src="perro.js"></script>
 </body>
 
