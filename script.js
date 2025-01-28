@@ -40,311 +40,299 @@ function scrollToCarousels() {
 
 
 
+import { categories } from './categories.js';
 
+let products = [];
+let fuse;
 
+const searchBar = document.getElementById('search-bar'); // Barra de búsqueda
+const carouselsContainer = document.getElementById('carousels-container'); // Contenedor de carruseles
 
-document.addEventListener('DOMContentLoaded', function() {
-    const categories = [
-        { id: 1, title: "Accesorios para Perros" },
-        { id: 2, title: "Comida premium para perros" },
-        { id: 3, title: "Comida para perros" },
-        { id: 4, title: "Juguetes para Perros" },
-        { id: 5, title: "Alimentos para Gatos" },
-        { id: 6, title: "Juguetes para Gatos" },
-        { id: 7, title: "Accesorios para Aves" },
-        { id: 8, title: "Accesorios para Peces" }
-    ];
+// Función para cargar productos
+async function loadProducts() {
+    try {
+        const response = await fetch('./products.json');
+        if (!response.ok) {
+            throw new Error(`Error al cargar los productos: ${response.statusText}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error al cargar los productos:', error);
+        return [];
+    }
+}
 
-    const products = [
-        { "id": 1, "categoryId": 1, "name": "Collar para Perro", "price": 45000, "description": "Collar ajustable para perros pequeños y medianos", "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg" },
-        { "id": 2, "categoryId": 1, "name": "Correa para Perro", "price": 25000, "description": "Correa resistente de nylon", "image": "https://th.bing.com/th/id/R.d8d9acae7b5e907b3d617507fc89188c?rik=E9nJq3VYJdC4UA&pid=ImgRaw&r=0" },
-        { "id": 3, "categoryId": 1, "name": "Abrigo para Perro", "price": 80000, "description": "Abrigo impermeable para clima frío", "image": "https://via.placeholder.com/150?text=Abrigo" },
-        { "id": 4, "categoryId": 1, "name": "Zapatos para Perro", "price": 50000, "description": "Zapatos antideslizantes para perros", "image": "https://via.placeholder.com/150?text=Zapatos" },
-        { "id": 5, "categoryId": 1, "name": "Sombrero para Perro", "price": 30000, "description": "Sombrero divertido para perros", "image": "https://via.placeholder.com/150?text=Sombrero" },
-        { "id": 6, "categoryId": 1, "name": "Cama para Perro", "price": 150000, "description": "Cama cómoda y resistente", "image": "https://via.placeholder.com/150?text=Cama" },
-        { "id": 7, "categoryId": 1, "name": "Mochila para Perro", "price": 70000, "description": "Mochila ligera para perros", "image": "https://via.placeholder.com/150?text=Mochila" },
-        { "id": 8, "categoryId": 1, "name": "Pañuelo para Perro", "price": 20000, "description": "Pañuelo decorativo", "image": "https://via.placeholder.com/150?text=Pañuelo" },
-        { "id": 9, "categoryId": 1, "name": "Gafas para Perro", "price": 40000, "description": "Gafas de sol protectoras", "image": "https://via.placeholder.com/150?text=Gafas" },
-        { "id": 10, "categoryId": 1, "name": "Cepillo para Perro", "price": 25000, "description": "Cepillo para el pelo", "image": "https://via.placeholder.com/150?text=Cepillo" },
-        { "id": 11, "categoryId": 1, "name": "Bolsa de Transporte", "price": 80000, "description": "Bolsa para transportar perros pequeños", "image": "https://via.placeholder.com/150?text=Bolsa" },
-        { "id": 12, "categoryId": 1, "name": "Plato para Perro", "price": 20000, "description": "Plato resistente de acero inoxidable", "image": "https://via.placeholder.com/150?text=Plato" },
-        { "id": 13, "categoryId": 1, "name": "Juguete Mordedor", "price": 35000, "description": "Juguete resistente para morder", "image": "https://via.placeholder.com/150?text=Juguete" },
-        { "id": 14, "categoryId": 1, "name": "Arnés para Perro", "price": 60000, "description": "Arnés ajustable para perros", "image": "https://via.placeholder.com/150?text=Arnés" },
-        { "id": 15, "categoryId": 1, "name": "Botella de Agua Portátil", "price": 30000, "description": "Botella para hidratar a tu perro en paseos", "image": "https://via.placeholder.com/150?text=Botella" },
-        { "id": 16, "categoryId": 1, "name": "Bolsas para Desechos", "price": 10000, "description": "Bolsas biodegradables para desechos", "image": "https://via.placeholder.com/150?text=Bolsas" },
-        { "id": 17, "categoryId": 1, "name": "Chaleco Salvavidas", "price": 90000, "description": "Chaleco salvavidas para perros", "image": "https://via.placeholder.com/150?text=Chaleco" },
-        { "id": 18, "categoryId": 1, "name": "Rascador para Perro", "price": 55000, "description": "Rascador para aliviar picazón", "image": "https://via.placeholder.com/150?text=Rascador" },
-        { "id": 19, "categoryId": 1, "name": "Tazón Antideslizante", "price": 25000, "description": "Tazón que no se desliza mientras come", "image": "https://via.placeholder.com/150?text=Tazón" },
-        { "id": 20, "categoryId": 1, "name": "Snacks Saludables", "price": 20000, "description": "Snacks ricos y nutritivos", "image": "https://via.placeholder.com/150?text=Snacks" },
-        { "id": 21, "categoryId": 1, "name": "Kit de Limpieza", "price": 75000, "description": "Set completo para limpieza de perros", "image": "https://via.placeholder.com/150?text=Kit" },
-        { "id": 22, "categoryId": 1, "name": "Camisa para Perro", "price": 40000, "description": "Camisa cómoda y moderna", "image": "https://via.placeholder.com/150?text=Camisa" },
-        { "id": 23, "categoryId": 1, "name": "Cuerda para Perros", "price": 18000, "description": "Cuerda para juegos de tirón", "image": "https://via.placeholder.com/150?text=Cuerda" },
-        { "id": 24, "categoryId": 1, "name": "Tienda para Perros", "price": 120000, "description": "Casa portátil para perros", "image": "https://via.placeholder.com/150?text=Tienda" },
-        { "id": 25, "categoryId": 1, "name": "Juguete Interactivo", "price": 50000, "description": "Juguete para estimular la mente", "image": "https://via.placeholder.com/150?text=Interactivo" },
-        { "id": 26, "categoryId": 1, "name": "Disco Volador", "price": 30000, "description": "Juguete para lanzar y recoger", "image": "https://via.placeholder.com/150?text=Disco" },
-        { "id": 27, "categoryId": 1, "name": "Collar Antipulgas", "price": 55000, "description": "Collar que protege contra pulgas", "image": "https://via.placeholder.com/150?text=Antipulgas" },
+// Función para animación "fly to cart"
+function flyToCart(element, isAdding) {
+    // Aquí puedes implementar la animación visual "fly to cart" según tus necesidades
+    console.log(`Animación ${isAdding ? 'to' : 'from'} cart para:`, element);
+}
 
+// Función para renderizar productos en carruseles
+function renderProducts(productsToRender) {
+    carouselsContainer.innerHTML = ''; // Limpiar el contenedor principal
 
+    // Agrupar productos por categoría
+    const groupedProducts = productsToRender.reduce((acc, product) => {
+        const category = categories.find(cat => cat.id === product.categoryId);
+        if (!category) return acc;
+        if (!acc[category.title]) acc[category.title] = [];
+        acc[category.title].push(product);
+        return acc;
+    }, {});
 
-        { "id": 28, "categoryId": 2, "name": "Comida Premium para Perros", "price": 85000, "description": "Alimento de alta calidad para perros exigentes", "image": "https://via.placeholder.com/150?text=Comida+Premium" },
-        { "id": 29, "categoryId": 2, "name": "Snacks Saludables", "price": 45000, "description": "Bocadillos ricos y nutritivos para perros", "image": "https://via.placeholder.com/150?text=Snacks" },
-        { "id": 30, "categoryId": 2, "name": "Croquetas Húmedas", "price": 75000, "description": "Comida húmeda de calidad premium", "image": "https://via.placeholder.com/150?text=Croquetas" },
-        { "id": 31, "categoryId": 2, "name": "Barritas Masticables", "price": 55000, "description": "Barritas deliciosas para perros activos", "image": "https://via.placeholder.com/150?text=Barritas" },
-        { "id": 32, "categoryId": 2, "name": "Comida Especial para Cachorros", "price": 80000, "description": "Nutrición completa para los más pequeños", "image": "https://via.placeholder.com/150?text=Cachorros" },
-        { "id": 33, "categoryId": 2, "name": "Alimento Hipoalergénico", "price": 95000, "description": "Ideal para perros con sensibilidad alimentaria", "image": "https://via.placeholder.com/150?text=Hipoalergénico" },
-        { "id": 34, "categoryId": 2, "name": "Comida Baja en Grasa", "price": 70000, "description": "Para perros que necesitan controlar su peso", "image": "https://via.placeholder.com/150?text=Baja+Grasa" },
-        { "id": 35, "categoryId": 2, "name": "Comida Gourmet para Perros", "price": 100000, "description": "Una experiencia de sabor premium", "image": "https://via.placeholder.com/150?text=Gourmet" },
-        { "id": 36, "categoryId": 2, "name": "Croquetas Orgánicas", "price": 87000, "description": "Ingredientes 100% orgánicos y frescos", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-        { "id": 37, "categoryId": 2, "name": "Comida para Perros Senior", "price": 89000, "description": "Nutrición adaptada para perros mayores", "image": "https://via.placeholder.com/150?text=Senior" },
-        { "id": 38, "categoryId": 2, "name": "Comida Deshidratada", "price": 78000, "description": "Sabor y frescura en cada porción", "image": "https://via.placeholder.com/150?text=Deshidratada" },
-        { "id": 39, "categoryId": 2, "name": "Croquetas de Salmón", "price": 91000, "description": "Ricas en omega-3 para un pelaje brillante", "image": "https://via.placeholder.com/150?text=Salmón" },
-        { "id": 40, "categoryId": 2, "name": "Alimento para Perros Activos", "price": 83000, "description": "Energía para perros que se mueven mucho", "image": "https://via.placeholder.com/150?text=Activos" },
-        { "id": 41, "categoryId": 2, "name": "Comida Económica para Perros", "price": 45000, "description": "Calidad al mejor precio", "image": "https://via.placeholder.com/150?text=Económica" },
-        { "id": 42, "categoryId": 2, "name": "Snacks con Vitaminas", "price": 30000, "description": "Snacks enriquecidos para perros saludables", "image": "https://via.placeholder.com/150?text=Vitaminas" },
-        { "id": 43, "categoryId": 2, "name": "Alimento en Lata", "price": 56000, "description": "Comida húmeda de sabor irresistible", "image": "https://via.placeholder.com/150?text=Lata" },
-        { "id": 44, "categoryId": 2, "name": "Comida para Perros Grandes", "price": 85000, "description": "Raciones para razas grandes", "image": "https://via.placeholder.com/150?text=Grandes" },
-        { "id": 45, "categoryId": 2, "name": "Alimento para Razas Pequeñas", "price": 72000, "description": "Ideal para perros pequeños", "image": "https://via.placeholder.com/150?text=Pequeñas" },
-        { "id": 46, "categoryId": 2, "name": "Comida Balanceada", "price": 88000, "description": "Equilibrio perfecto de nutrientes", "image": "https://via.placeholder.com/150?text=Balanceada" },
-        { "id": 47, "categoryId": 2, "name": "Croquetas de Pollo", "price": 81000, "description": "El sabor favorito de todos los perros", "image": "https://via.placeholder.com/150?text=Pollo" },
-        { "id": 48, "categoryId": 2, "name": "Snack Masticable", "price": 27000, "description": "Entretenimiento y sabor", "image": "https://via.placeholder.com/150?text=Masticable" },
-        { "id": 49, "categoryId": 2, "name": "Comida Vegana", "price": 90000, "description": "Ideal para dueños y perros veganos", "image": "https://via.placeholder.com/150?text=Vegana" },
-        { "id": 50, "categoryId": 2, "name": "Barritas Orgánicas", "price": 39000, "description": "Barras saludables y deliciosas", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-        { "id": 51, "categoryId": 2, "name": "Bolsa Familiar de Comida", "price": 105000, "description": "Rendimiento para toda la familia canina", "image": "https://via.placeholder.com/150?text=Familiar" },
+    // Crear carrusel para cada categoría
+    Object.entries(groupedProducts).forEach(([categoryTitle, products]) => {
+        const carouselContainer = document.createElement('div');
+        carouselContainer.className = 'carousel-container';
 
-        { "id": 28, "categoryId": 3, "name": "Comida Premium para Perros", "price": 85000, "description": "Alimento de alta calidad para perros exigentes", "image": "https://via.placeholder.com/150?text=Comida+Premium" },
-        { "id": 29, "categoryId": 3, "name": "Snacks Saludables", "price": 45000, "description": "Bocadillos ricos y nutritivos para perros", "image": "https://via.placeholder.com/150?text=Snacks" },
-        { "id": 30, "categoryId": 3, "name": "Croquetas Húmedas", "price": 75000, "description": "Comida húmeda de calidad premium", "image": "https://via.placeholder.com/150?text=Croquetas" },
-        { "id": 31, "categoryId": 3, "name": "Barritas Masticables", "price": 55000, "description": "Barritas deliciosas para perros activos", "image": "https://via.placeholder.com/150?text=Barritas" },
-        { "id": 32, "categoryId": 3, "name": "Comida Especial para Cachorros", "price": 80000, "description": "Nutrición completa para los más pequeños", "image": "https://via.placeholder.com/150?text=Cachorros" },
-        { "id": 33, "categoryId": 3, "name": "Alimento Hipoalergénico", "price": 95000, "description": "Ideal para perros con sensibilidad alimentaria", "image": "https://via.placeholder.com/150?text=Hipoalergénico" },
-        { "id": 34, "categoryId": 3, "name": "Comida Baja en Grasa", "price": 70000, "description": "Para perros que necesitan controlar su peso", "image": "https://via.placeholder.com/150?text=Baja+Grasa" },
-        { "id": 35, "categoryId": 3, "name": "Comida Gourmet para Perros", "price": 100000, "description": "Una experiencia de sabor premium", "image": "https://via.placeholder.com/150?text=Gourmet" },
-        { "id": 36, "categoryId": 3, "name": "Croquetas Orgánicas", "price": 87000, "description": "Ingredientes 100% orgánicos y frescos", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-        { "id": 37, "categoryId": 3, "name": "Comida para Perros Senior", "price": 89000, "description": "Nutrición adaptada para perros mayores", "image": "https://via.placeholder.com/150?text=Senior" },
-        { "id": 38, "categoryId": 3, "name": "Comida Deshidratada", "price": 78000, "description": "Sabor y frescura en cada porción", "image": "https://via.placeholder.com/150?text=Deshidratada" },
-        { "id": 39, "categoryId": 3, "name": "Croquetas de Salmón", "price": 91000, "description": "Ricas en omega-3 para un pelaje brillante", "image": "https://via.placeholder.com/150?text=Salmón" },
-        { "id": 40, "categoryId": 3, "name": "Alimento para Perros Activos", "price": 83000, "description": "Energía para perros que se mueven mucho", "image": "https://via.placeholder.com/150?text=Activos" },
-        { "id": 41, "categoryId": 3, "name": "Comida Económica para Perros", "price": 45000, "description": "Calidad al mejor precio", "image": "https://via.placeholder.com/150?text=Económica" },
-        { "id": 42, "categoryId": 3, "name": "Snacks con Vitaminas", "price": 30000, "description": "Snacks enriquecidos para perros saludables", "image": "https://via.placeholder.com/150?text=Vitaminas" },
-        { "id": 43, "categoryId": 3, "name": "Alimento en Lata", "price": 56000, "description": "Comida húmeda de sabor irresistible", "image": "https://via.placeholder.com/150?text=Lata" },
-        { "id": 44, "categoryId": 3, "name": "Comida para Perros Grandes", "price": 85000, "description": "Raciones para razas grandes", "image": "https://via.placeholder.com/150?text=Grandes" },
-        { "id": 45, "categoryId": 3, "name": "Alimento para Razas Pequeñas", "price": 72000, "description": "Ideal para perros pequeños", "image": "https://via.placeholder.com/150?text=Pequeñas" },
-        { "id": 46, "categoryId": 3, "name": "Comida Balanceada", "price": 88000, "description": "Equilibrio perfecto de nutrientes", "image": "https://via.placeholder.com/150?text=Balanceada" },
-        { "id": 47, "categoryId": 3, "name": "Croquetas de Pollo", "price": 81000, "description": "El sabor favorito de todos los perros", "image": "https://via.placeholder.com/150?text=Pollo" },
-        { "id": 48, "categoryId": 3, "name": "Snack Masticable", "price": 27000, "description": "Entretenimiento y sabor", "image": "https://via.placeholder.com/150?text=Masticable" },
-        { "id": 49, "categoryId": 3, "name": "Comida Vegana", "price": 90000, "description": "Ideal para dueños y perros veganos", "image": "https://via.placeholder.com/150?text=Vegana" },
-        { "id": 50, "categoryId": 3, "name": "Barritas Orgánicas", "price": 39000, "description": "Barras saludables y deliciosas", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-        { "id": 51, "categoryId": 3, "name": "Bolsa Familiar de Comida", "price": 105000, "description": "Rendimiento para toda la familia canina", "image": "https://via.placeholder.com/150?text=Familiar" },
+        // Título de la categoría
+        const titleElement = document.createElement('h2');
+        titleElement.className = 'carousel-title';
+        titleElement.textContent = categoryTitle;
+        carouselContainer.appendChild(titleElement);
 
-        { "id": 28, "categoryId": 4, "name": "Comida Premium para Perros", "price": 85000, "description": "Alimento de alta calidad para perros exigentes", "image": "https://via.placeholder.com/150?text=Comida+Premium" },
-        { "id": 29, "categoryId": 4, "name": "Snacks Saludables", "price": 45000, "description": "Bocadillos ricos y nutritivos para perros", "image": "https://via.placeholder.com/150?text=Snacks" },
-        { "id": 30, "categoryId": 4, "name": "Croquetas Húmedas", "price": 75000, "description": "Comida húmeda de calidad premium", "image": "https://via.placeholder.com/150?text=Croquetas" },
-        { "id": 31, "categoryId": 4, "name": "Barritas Masticables", "price": 55000, "description": "Barritas deliciosas para perros activos", "image": "https://via.placeholder.com/150?text=Barritas" },
-        { "id": 32, "categoryId": 4, "name": "Comida Especial para Cachorros", "price": 80000, "description": "Nutrición completa para los más pequeños", "image": "https://via.placeholder.com/150?text=Cachorros" },
-        { "id": 33, "categoryId": 4, "name": "Alimento Hipoalergénico", "price": 95000, "description": "Ideal para perros con sensibilidad alimentaria", "image": "https://via.placeholder.com/150?text=Hipoalergénico" },
-        { "id": 34, "categoryId": 4, "name": "Comida Baja en Grasa", "price": 70000, "description": "Para perros que necesitan controlar su peso", "image": "https://via.placeholder.com/150?text=Baja+Grasa" },
-        { "id": 35, "categoryId": 4, "name": "Comida Gourmet para Perros", "price": 100000, "description": "Una experiencia de sabor premium", "image": "https://via.placeholder.com/150?text=Gourmet" },
-        { "id": 36, "categoryId": 4, "name": "Croquetas Orgánicas", "price": 87000, "description": "Ingredientes 100% orgánicos y frescos", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-        { "id": 37, "categoryId": 4, "name": "Comida para Perros Senior", "price": 89000, "description": "Nutrición adaptada para perros mayores", "image": "https://via.placeholder.com/150?text=Senior" },
-        { "id": 38, "categoryId": 4, "name": "Comida Deshidratada", "price": 78000, "description": "Sabor y frescura en cada porción", "image": "https://via.placeholder.com/150?text=Deshidratada" },
-        { "id": 39, "categoryId": 4, "name": "Croquetas de Salmón", "price": 91000, "description": "Ricas en omega-3 para un pelaje brillante", "image": "https://via.placeholder.com/150?text=Salmón" },
-        { "id": 40, "categoryId": 4, "name": "Alimento para Perros Activos", "price": 83000, "description": "Energía para perros que se mueven mucho", "image": "https://via.placeholder.com/150?text=Activos" },
-        { "id": 41, "categoryId": 4, "name": "Comida Económica para Perros", "price": 45000, "description": "Calidad al mejor precio", "image": "https://via.placeholder.com/150?text=Económica" },
-        { "id": 42, "categoryId": 4, "name": "Snacks con Vitaminas", "price": 30000, "description": "Snacks enriquecidos para perros saludables", "image": "https://via.placeholder.com/150?text=Vitaminas" },
-        { "id": 43, "categoryId": 4, "name": "Alimento en Lata", "price": 56000, "description": "Comida húmeda de sabor irresistible", "image": "https://via.placeholder.com/150?text=Lata" },
-        { "id": 44, "categoryId": 4, "name": "Comida para Perros Grandes", "price": 85000, "description": "Raciones para razas grandes", "image": "https://via.placeholder.com/150?text=Grandes" },
-        { "id": 45, "categoryId": 4, "name": "Alimento para Razas Pequeñas", "price": 72000, "description": "Ideal para perros pequeños", "image": "https://via.placeholder.com/150?text=Pequeñas" },
-        { "id": 46, "categoryId": 4, "name": "Comida Balanceada", "price": 88000, "description": "Equilibrio perfecto de nutrientes", "image": "https://via.placeholder.com/150?text=Balanceada" },
-        { "id": 47, "categoryId": 4, "name": "Croquetas de Pollo", "price": 81000, "description": "El sabor favorito de todos los perros", "image": "https://via.placeholder.com/150?text=Pollo" },
-        { "id": 48, "categoryId": 4, "name": "Snack Masticable", "price": 27000, "description": "Entretenimiento y sabor", "image": "https://via.placeholder.com/150?text=Masticable" },
-        { "id": 49, "categoryId": 4, "name": "Comida Vegana", "price": 90000, "description": "Ideal para dueños y perros veganos", "image": "https://via.placeholder.com/150?text=Vegana" },
-        { "id": 50, "categoryId": 4, "name": "Barritas Orgánicas", "price": 39000, "description": "Barras saludables y deliciosas", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-        { "id": 51, "categoryId": 4, "name": "Bolsa Familiar de Comida", "price": 105000, "description": "Rendimiento para toda la familia canina", "image": "https://via.placeholder.com/150?text=Familiar" }
-    ];
+        // Track del carrusel
+        const carouselTrack = document.createElement('div');
+        carouselTrack.className = 'carousel-track';
 
+        // Dividir productos en páginas de 16
+        const totalPages = Math.ceil(products.length / 16);
+        for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
+            const page = document.createElement('div');
+            page.className = 'carousel-slide';
+            page.style.display = pageIndex === 0 ? 'grid' : 'none'; // Mostrar solo la primera página
 
+            // Agregar 16 productos por página
+            const productsPage = products.slice(pageIndex * 16, (pageIndex + 1) * 16);
+            productsPage.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-details">
+                        <h3>${product.name}</h3>
+                        <p>$${product.price.toFixed(2)}</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity">0</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="buy-btn">Comprar</button>
+                    </div>
+                `;
 
+                const minusBtn = productCard.querySelector('.minus');
+                const plusBtn = productCard.querySelector('.plus');
+                const quantitySpan = productCard.querySelector('.quantity');
+                const buyBtn = productCard.querySelector('.buy-btn');
 
+                // Evento para aumentar cantidad
+                plusBtn.addEventListener('click', () => {
+                    let quantity = parseInt(quantitySpan.textContent);
+                    quantity++;
+                    quantitySpan.textContent = quantity;
+                    addToCart(product.id, product.name, product.price, quantity);
+                    flyToCart(productCard, true); // Animación "fly to cart"
+                });
 
-    const searchBar = document.getElementById('search-bar');
-    const carouselsContainer = document.getElementById('carousels-container');
+                // Evento para disminuir cantidad
+                minusBtn.addEventListener('click', () => {
+                    let quantity = parseInt(quantitySpan.textContent);
+                    if (quantity > 0) {
+                        quantity--;
+                        quantitySpan.textContent = quantity;
+                        addToCart(product.id, product.name, product.price, quantity);
+                        flyToCart(productCard, false); // Animación inversa
+                    }
+                });
 
-    // Configuración inicial de Fuse.js
-    const fuse = new Fuse(products, {
-        keys: ['name', 'description'], // Campos a buscar
-        threshold: 0.3, // Ajusta la tolerancia para coincidencias aproximadas
+                // Evento para comprar
+                buyBtn.addEventListener('click', () => {
+                    const message = `Hola, estoy interesado en comprar el producto "${product.name}" por un valor de $${product.price.toFixed(2)}`;
+                    const whatsappURL = `https://wa.me/+573108853158?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappURL, '_blank');
+                });
+
+                page.appendChild(productCard);
+            });
+
+            carouselTrack.appendChild(page);
+        }
+
+        const prevButton = document.createElement('button');
+        prevButton.className = 'carousel-prev';
+        prevButton.textContent = '<';
+
+        const nextButton = document.createElement('button');
+        nextButton.className = 'carousel-next';
+        nextButton.textContent = '>';
+
+        let currentPage = 0;
+
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 0) {
+                carouselTrack.children[currentPage].style.display = 'none';
+                currentPage--;
+                carouselTrack.children[currentPage].style.display = 'grid';
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentPage < totalPages - 1) {
+                carouselTrack.children[currentPage].style.display = 'none';
+                currentPage++;
+                carouselTrack.children[currentPage].style.display = 'grid';
+            }
+        });
+
+        carouselContainer.appendChild(prevButton);
+        carouselContainer.appendChild(carouselTrack);
+        carouselContainer.appendChild(nextButton);
+        carouselsContainer.appendChild(carouselContainer);
+    });
+}
+
+// Inicialización al cargar el DOM
+document.addEventListener('DOMContentLoaded', async() => {
+    products = await loadProducts();
+
+    if (products.length === 0) {
+        console.error('No se pudieron cargar los productos.');
+        return;
+    }
+
+    console.log('Productos cargados:', products);
+
+    fuse = new Fuse(products, {
+        keys: ['name', 'description'],
+        threshold: 0.3,
     });
 
-    // Función para agregar producto al carrito
-    function addToCart(productId, productName, productPrice, quantity) {
-        if (quantity <= 0) {
-            delete cart[productId];
-        } else {
-            cart[productId] = { name: productName, price: productPrice, quantity };
-        }
-        updateCartCount();
-    }
+    renderProducts(products);
 
-    function updateCartCount() {
-        const cartCount = document.getElementById('cart-count'); // Asegúrate de que este elemento exista
-        const totalCount = Object.values(cart).reduce((acc, item) => acc + item.quantity, 0);
-        if (cartCount) {
-            cartCount.textContent = totalCount; // Actualiza el conteo en el elemento del carrito
-            cartCount.style.display = totalCount > 0 ? 'flex' : 'none'; // Muestra/oculta el contador según el total
-        }
-    }
-
-    // Evento para la barra de búsqueda con Fuse.js
     searchBar.addEventListener('input', (e) => {
-        const query = e.target.value.trim(); // Elimina espacios en blanco
+        const query = e.target.value.trim();
         if (query === '') {
-            renderProducts(products); // Si no hay búsqueda, mostrar todos los productos
+            renderProducts(products);
             return;
         }
 
-        // Realizar búsqueda difusa con Fuse.js
         const results = fuse.search(query);
-
-        // Obtener solo los elementos del resultado
         const filteredProducts = results.map(result => result.item);
-
-        // Renderizar los productos filtrados
         renderProducts(filteredProducts);
     });
+});
 
-    // Función para renderizar productos en carruseles
-    function renderProducts(productsToRender) {
-        carouselsContainer.innerHTML = ''; // Limpiar el contenedor principal
 
-        // Agrupar productos por categoría
-        const groupedProducts = productsToRender.reduce((acc, product) => {
-            const category = categories.find(cat => cat.id === product.categoryId);
-            if (!category) return acc;
-            if (!acc[category.title]) acc[category.title] = [];
-            acc[category.title].push(product);
-            return acc;
-        }, {});
+// Inicialización al cargar el DOM
+document.addEventListener('DOMContentLoaded', async() => {
+    products = await loadProducts();
 
-        // Crear carrusel para cada categoría
-        Object.entries(groupedProducts).forEach(([categoryTitle, products]) => {
-            const carouselContainer = document.createElement('div');
-            carouselContainer.className = 'carousel-container';
-
-            // Título de la categoría
-            const titleElement = document.createElement('h2');
-            titleElement.className = 'carousel-title';
-            titleElement.textContent = categoryTitle;
-            carouselContainer.appendChild(titleElement);
-
-            // Track del carrusel
-            const carouselTrack = document.createElement('div');
-            carouselTrack.className = 'carousel-track';
-
-            // Dividir productos en páginas de 12
-            const totalPages = Math.ceil(products.length / 16);
-            for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
-                const page = document.createElement('div');
-                page.className = 'carousel-slide';
-                page.style.display = pageIndex === 0 ? 'grid' : 'none'; // Solo mostrar la primera página
-
-                // Agregar 16 productos por página
-                const productsPage = products.slice(pageIndex * 16, (pageIndex + 1) * 16);
-                productsPage.forEach(product => {
-                    const productCard = document.createElement('div');
-                    productCard.className = 'product-card';
-                    productCard.innerHTML = `
-                        <img src="${product.image}" alt="${product.name}" class="product-image">
-                        <div class="product-details">
-                            <h3>${product.name}</h3>
-                            <p>$${product.price.toFixed(2)}</p>
-                            <div class="quantity-controls">
-                                <button class="quantity-btn minus">-</button>
-                                <span class="quantity">0</span>
-                                <button class="quantity-btn plus">+</button>
-                            </div>
-                            <button class="buy-btn">Comprar</button>
-                        </div>
-                    `;
-
-                    // Botones de cantidad
-                    const minusBtn = productCard.querySelector('.minus');
-                    const plusBtn = productCard.querySelector('.plus');
-                    const quantitySpan = productCard.querySelector('.quantity');
-                    const buyBtn = productCard.querySelector('.buy-btn');
-
-                    // Evento para aumentar cantidad
-                    plusBtn.addEventListener('click', () => {
-                        let quantity = parseInt(quantitySpan.textContent);
-                        quantity++;
-                        quantitySpan.textContent = quantity;
-                        addToCart(product.id, product.name, product.price, quantity);
-
-                        // Animación "fly to cart"
-                        flyToCart(productCard, true);
-                    });
-
-                    // Evento para disminuir cantidad
-                    minusBtn.addEventListener('click', () => {
-                        let quantity = parseInt(quantitySpan.textContent);
-                        if (quantity > 0) {
-                            quantity--;
-                            quantitySpan.textContent = quantity;
-                            addToCart(product.id, product.name, product.price, quantity);
-
-                            // Animación inversa "fly from cart"
-                            flyToCart(productCard, false);
-                        }
-                    });
-
-                    // Evento para comprar
-                    buyBtn.addEventListener('click', () => {
-                        const message = `Hola, estoy interesado en comprar el producto "${product.name}" por un valor de $${product.price.toFixed(2)}`;
-                        const whatsappURL = `https://wa.me/+573108853158?text=${encodeURIComponent(message)}`;
-                        window.open(whatsappURL, '_blank');
-                    });
-
-                    page.appendChild(productCard);
-                });
-
-                carouselTrack.appendChild(page);
-            }
-
-            // Botones de navegación
-            const prevButton = document.createElement('button');
-            prevButton.className = 'carousel-prev';
-            prevButton.textContent = '<';
-
-            const nextButton = document.createElement('button');
-            nextButton.className = 'carousel-next';
-            nextButton.textContent = '>';
-
-            let currentPage = 0;
-
-            prevButton.addEventListener('click', () => {
-                if (currentPage > 0) {
-                    carouselTrack.children[currentPage].style.display = 'none';
-                    currentPage--;
-                    carouselTrack.children[currentPage].style.display = 'grid';
-                }
-            });
-
-            nextButton.addEventListener('click', () => {
-                if (currentPage < totalPages - 1) {
-                    carouselTrack.children[currentPage].style.display = 'none';
-                    currentPage++;
-                    carouselTrack.children[currentPage].style.display = 'grid';
-                }
-            });
-
-            carouselContainer.appendChild(prevButton);
-            carouselContainer.appendChild(carouselTrack);
-            carouselContainer.appendChild(nextButton);
-            carouselsContainer.appendChild(carouselContainer);
-        });
+    if (products.length === 0) {
+        console.error('No se pudieron cargar los productos.');
+        return;
     }
 
-    // Renderizar productos al cargar
+    console.log('Productos cargados:', products);
+
+    fuse = new Fuse(products, {
+        keys: ['name', 'description'],
+        threshold: 0.3,
+    });
+
     renderProducts(products);
+
+    if (searchBar) {
+        searchBar.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            if (query === '') {
+                renderProducts(products);
+                return;
+            }
+
+            const results = fuse.search(query);
+            const filteredProducts = results.map(result => result.item);
+            renderProducts(filteredProducts);
+        });
+    } else {
+        console.error('El elemento search-bar no existe en el DOM.');
+    }
+});
+
+
+
+
+
+
+
+// Inicialización al cargar el DOM
+document.addEventListener('DOMContentLoaded', async() => {
+    // Cargar productos desde products.json
+    products = await loadProducts();
+
+    // Verificar si los productos se cargaron correctamente
+    if (products.length === 0) {
+        console.error('No se pudieron cargar los productos.');
+        return;
+    }
+
+    console.log('Productos cargados:', products);
+
+    // Inicializar Fuse.js después de cargar los productos
+    fuse = new Fuse(products, {
+        keys: ['name', 'description'], // Campos para buscar
+        threshold: 0.3, // Ajustar tolerancia
+    });
+
+    // Renderizar los productos
+    renderProducts(products);
+
+    // Configurar eventos para la barra de búsqueda
+    const searchBar = document.getElementById('search-bar');
+    if (searchBar) {
+        searchBar.addEventListener('input', (e) => {
+            const query = e.target.value.trim(); // Elimina espacios en blanco
+            if (query === '') {
+                renderProducts(products); // Si no hay búsqueda, mostrar todos los productos
+                return;
+            }
+
+            // Realizar búsqueda con Fuse.js
+            const results = fuse.search(query);
+
+            // Obtener solo los elementos del resultado
+            const filteredProducts = results.map(result => result.item);
+
+            // Renderizar los productos filtrados
+            renderProducts(filteredProducts);
+        });
+    } else {
+        console.error('El elemento search-bar no existe en el DOM.');
+    }
+});
+
+
+
+
+// Evento para la barra de búsqueda con Fuse.js
+searchBar.addEventListener('input', (e) => {
+    const query = e.target.value.trim(); // Elimina espacios en blanco
+    if (query === '') {
+        renderProducts(products); // Si no hay búsqueda, mostrar todos los productos
+        return;
+    }
+
+    // Realizar búsqueda difusa con Fuse.js
+    const results = fuse.search(query);
+
+    // Obtener solo los elementos del resultado
+    const filteredProducts = results.map(result => result.item);
+
+
+
+
 
 
 
@@ -459,22 +447,23 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(whatsappURL, '_blank');
     }
     document.addEventListener('DOMContentLoaded', () => {});
-})
 
-document.addEventListener('DOMContentLoaded', function() {
-    const mainFab = document.getElementById('main-fab');
-    const fabSocialLinks = document.getElementById('fab-social-links');
 
-    mainFab.addEventListener('click', function() {
-        // Agregar animación de giro
-        mainFab.classList.add('rotate');
+    document.addEventListener('DOMContentLoaded', function() {
+        const mainFab = document.getElementById('main-fab');
+        const fabSocialLinks = document.getElementById('fab-social-links');
 
-        // Quitar la clase después de la animación para que pueda repetirse
-        setTimeout(() => {
-            mainFab.classList.remove('rotate');
-        }, 500); // Duración de la animación en ms
+        mainFab.addEventListener('click', function() {
+            // Agregar animación de giro
+            mainFab.classList.add('rotate');
 
-        // Mostrar u ocultar las redes sociales
-        fabSocialLinks.classList.toggle('active');
+            // Quitar la clase después de la animación para que pueda repetirse
+            setTimeout(() => {
+                mainFab.classList.remove('rotate');
+            }, 500); // Duración de la animación en ms
+
+            // Mostrar u ocultar las redes sociales
+            fabSocialLinks.classList.toggle('active');
+        });
     });
-});
+})
