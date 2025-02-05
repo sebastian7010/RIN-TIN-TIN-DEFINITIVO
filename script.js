@@ -300,11 +300,16 @@ function sendCartToWhatsApp() {
             let product = products.find(p => String(p.id) === productId);
             if (product) {
                 hasProducts = true;
-                let qty = cart[productId];
-                let price = product.price;
-                let subtotal = qty * price;
+                const qty = cart[productId];
+                const price = product.price;
+                const subtotal = qty * price;
                 totalPrice += subtotal;
-                message += `- ${product.name}: ${qty} unidad(es) x $${price.toLocaleString()} = $${subtotal.toLocaleString()}\n`;
+                // Se agregan detalles del producto y la URL de la imagen
+                message += `\n*${product.name}*\n`;
+                message += `Cantidad: ${qty}\n`;
+                message += `Precio unitario: $${price.toLocaleString()}\n`;
+                message += `Subtotal: $${subtotal.toLocaleString()}\n`;
+                message += `Imagen: ${product.image}\n`;
             }
         }
     }
@@ -315,18 +320,14 @@ function sendCartToWhatsApp() {
     }
 
     message += `\nTotal a pagar: $${totalPrice.toLocaleString()}`;
-    let phone = "573108853158";
-    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    const phone = "573108853158";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
 }
 
-// Exponer la función para que sea accesible desde el HTML
+// Exponemos la función para que sea accesible desde el HTML
 window.sendCartToWhatsApp = sendCartToWhatsApp;
 
-// Cargar productos al iniciar la página
-document.addEventListener('DOMContentLoaded', () => {
-    loadProducts().then(renderAllCategories);
-});
 
 
 function flyToCart(cardElement, isAdding) {
