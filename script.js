@@ -184,9 +184,14 @@ function generateProductGrid(products) {
         html += '<div class="carousel-row">';
         const rowProducts = products.slice(i, i + 6);
         rowProducts.forEach(product => {
+            // Si existe product.gallery, úsalo; si no, se usará product.image
+            const galleryArray = product.gallery && product.gallery.length ?
+                product.gallery : [product.image];
+            // Convertir el array a JSON para el atributo data-gallery
+            const galleryData = JSON.stringify(galleryArray);
             html += `
         <div class="product-card" data-id="${product.id}">
-          <img src="${product.image}" alt="${product.name}" class="product-image">
+          <img src="${product.image}" alt="${product.name}" class="product-image" data-gallery='${galleryData}'>
           <div class="product-details">
             <h3>${product.name}</h3>
             <p>$${product.price.toLocaleString()}</p>
@@ -204,6 +209,8 @@ function generateProductGrid(products) {
     html += '</div>'; // Cierra la página
     return html;
 }
+
+
 
 /** Cambiar página del carrusel **/
 window.changePage = function(categoryId, direction) {
@@ -425,8 +432,12 @@ window.scrollToCarousels = scrollToCarousels;
 
 // Otras funciones y la carga de productos...
 document.addEventListener('DOMContentLoaded', () => {
-    loadProducts().then(renderAllCategories);
+    loadProducts().then(() => {
+        renderAllCategories();
+        assignImageClickEvents(); // Asigna el clic a las imágenes para abrir el modal
+    });
 });
+
 
 function goToWhatsAppContact() {
     const phone = "573108853158"; // Asegúrate de que este número esté en el formato correcto (código de país sin símbolos)
@@ -489,3 +500,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     observer.observe(counterContainer);
 });
+
+function openModal(imageElement) {
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalImagesContainer = document.getElementById('modal-images');
+
+    // Limpiar imágenes previas en el modal
+    modalImagesContainer.innerHTML = '';
+
+    // Obtener el atributo data-gallery (se espera que sea un JSON con las URLs)
+    const galleryData = imageElement.getAttribute('data-gallery');
+    let images = [];
+    try {
+        images = JSON.parse(galleryData);
+    } catch (error) {
+        // Si falla el parse o no existe, se usa la imagen principal
+        images = [imageElement.src];
+    }
+
+    // Por cada imagen, crear un elemento <img> y agregarlo al contenedor
+    images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = imageElement.alt || 'Producto';
+        modalImagesContainer.appendChild(img);
+    });
+
+    // Mostrar el modal
+    modalOverlay.style.display = 'flex';
+}
+
+
+function assignImageClickEvents() {
+    const productImages = document.querySelectorAll('.product-image');
+    productImages.forEach(img => {
+        img.style.cursor = 'pointer'; // Para indicar que es clickeable
+        img.addEventListener('click', () => {
+            openModal(img);
+        });
+    });
+}
+
+
+window.openModal = openModal;
+window.assignImageClickEvents = assignImageClickEvents;
