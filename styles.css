@@ -1062,3 +1062,41 @@ body {
     text-align: right;
     line-height: 1.2;
 }
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+.purchases-counter {
+    text-align: center;
+    margin: 1px auto;
+    /* Ajusta el margen según tu layout */
+    padding: 20px;
+}
+
+.purchases-counter .title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 3rem 0 0.5rem 0;
+    /* 0.5rem abajo */
+}
+
+.text-counter {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}

@@ -437,3 +437,55 @@ function goToWhatsAppContact() {
 
 // Exponemos la función al objeto global, en caso de que se use un onclick inline
 window.goToWhatsAppContact = goToWhatsAppContact;
+
+/**
+ * Función que anima el contador de 0 hasta targetNumber en la duración especificada (en milisegundos)
+ * @param {number} targetNumber - Valor final del contador.
+ * @param {number} duration - Duración de la animación en milisegundos.
+ */
+function animateCounter(targetNumber, duration) {
+    const counterElem = document.getElementById("counter");
+    let startTime = null;
+
+    function updateCounter(currentTime) {
+        if (!startTime) {
+            startTime = currentTime;
+        }
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Función de easing ease-out (más natural)
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+        const currentValue = Math.floor(easedProgress * targetNumber);
+        counterElem.textContent = currentValue.toLocaleString();
+
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        }
+    }
+
+    requestAnimationFrame(updateCounter);
+}
+
+// Usamos Intersection Observer para disparar la animación cuando el contenedor es visible
+document.addEventListener('DOMContentLoaded', () => {
+    const counterContainer = document.getElementById('purchases-counter-container');
+    let hasAnimated = false; // Para asegurarnos de que la animación se ejecute solo una vez
+
+    const observerOptions = {
+        threshold: 0.3 // El callback se dispara cuando el 50% del contenedor es visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                animateCounter(1000000, 10000);
+                hasAnimated = true;
+                observer.unobserve(counterContainer); // Deja de observar una vez animado
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(counterContainer);
+});
