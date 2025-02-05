@@ -337,6 +337,10 @@ body {
     /* Color de fondo suave para separar visualmente */
 }
 
+.category-title {
+    margin-top: 2rem;
+}
+
 .carousel-container {
     position: relative;
     margin: 20px 0;
@@ -360,7 +364,6 @@ body {
     grid-template-rows: repeat(2, auto);
     gap: 15px;
     flex: 0 0 100%;
-    padding: 15px;
 }
 
 
@@ -1087,8 +1090,7 @@ body {
     font-size: 3rem;
     font-weight: bold;
     color: #333;
-    margin: 3rem 0 0.5rem 0;
-    /* 0.5rem abajo */
+    margin-top: 4rem;
 }
 
 .text-counter {
