@@ -541,6 +541,19 @@ function assignImageClickEvents() {
     });
 }
 
+function closeModal() {
+    const modalOverlay = document.getElementById('modal-overlay');
+    modalOverlay.style.display = 'none';
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+        closeModal();
+    }
+});
+
+
 
 window.openModal = openModal;
 window.assignImageClickEvents = assignImageClickEvents;
