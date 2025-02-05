@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderProducts(productsToRender) {
         carouselsContainer.innerHTML = ''; // Limpiar el contenedor principal
 
+
         // Agrupar productos por categoría
         const groupedProducts = productsToRender.reduce((acc, product) => {
             const category = categories.find(cat => cat.id === product.categoryId);
