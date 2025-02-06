@@ -192,7 +192,7 @@ body {
 .carousel-container {
     position: relative;
     margin: 20px 0 0;
-    padding-left: 3.8rem;
+    padding-left: 3.rem;
     overflow: hidden;
     width: 100%;
     /* Asegurar que ocupe todo el ancho del contenedor padre */
