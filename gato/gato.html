@@ -34,11 +34,10 @@
 
 
     <section class="button-section">
-        <button class="filter-btn" onclick="filterCategory('Accesorios para Gatos')">Accesorios para Gatos</button>
-        <button class="filter-btn" onclick="filterCategory('Comida premium para Gatos')">Comida Premium para Gatos</button>
-
-        <button class="filter-btn" onclick="filterCategory('Comida para Gatos')">Comida para Gatos</button>
-        <button class="filter-btn" onclick="filterCategory('Juguetes para Gatos')">Juguetes para Gatos</button>
+        <button class="filter-btn" data-category="Accesorios para Gtaos">Accesorios para Gatos</button>
+        <button class="filter-btn" data-category="Comida premium para Gatos">Comida Premium para Gatos</button>
+        <button class="filter-btn" data-category="Comida para Gatos">Comida para Gatos</button>
+        <button class="filter-btn" data-category="Juguetes para Gatos">Juguetes para Gatos</button>
     </section>
 
 
@@ -101,8 +100,8 @@
 
 
     <script src="https://unpkg.com/fuse.js/dist/fuse.js"></script>
+    <script type="module" src="gato.js"></script>
 
-    <script src="gato.js"></script>
 </body>
 
 </html>
