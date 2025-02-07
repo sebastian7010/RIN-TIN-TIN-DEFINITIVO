@@ -4,7 +4,6 @@ let products = []; // Lista de productos obtenida del JSON
 let fuse; // Instancia de Fuse.js para búsqueda
 // Si el ancho es menor o igual a 480px (móviles), se muestran 4 productos; de lo contrario, 16.
 let productsPerPage = window.innerWidth <= 480 ? 4 : 16;
-
 let categoryPages = {}; // Página actual por categoría
 
 // Opciones de Fuse.js
@@ -15,6 +14,7 @@ const fuseOptions = {
 
 // Importación de las categorías desde el módulo externo
 import { categories } from './categories.js';
+
 
 /** Inicializar búsqueda usando Fuse.js **/
 function initializeSearch() {
@@ -182,25 +182,27 @@ function renderCategory(categoryId) {
 /** Genera la grid de productos (disposición 6x2) con botón de compra **/
 function generateProductGrid(products) {
     let html = '<div class="carousel-page">';
+    // Se itera de a productsPerPage elementos
     for (let i = 0; i < products.length; i += productsPerPage) {
         html += '<div class="carousel-row">';
         const rowProducts = products.slice(i, i + productsPerPage);
         rowProducts.forEach(product => {
-            // Genera la tarjeta (product-card) con sus datos
             html += `
-          <div class="product-card" data-id="${product.id}">
-            <img src="${product.image}" alt="${product.name}" class="product-image" data-gallery='${JSON.stringify(product.gallery && product.gallery.length ? product.gallery : [product.image])}'>
-            <div class="product-details">
-              <h3>${product.name}</h3>
-              <p>$${product.price.toLocaleString()}</p>
-              <div class="quantity-controls">
-                <button class="quantity-btn minus" data-id="${product.id}">-</button>
-                <span id="quantity-${product.id}">0</span>
-                <button class="quantity-btn plus" data-id="${product.id}">+</button>
+            <div class="product-card" data-id="${product.id}">
+              <img src="${product.image}" alt="${product.name}" class="product-image" data-gallery='${JSON.stringify(
+                product.gallery && product.gallery.length ? product.gallery : [product.image]
+              )}'>
+              <div class="product-details">
+                <h3>${product.name}</h3>
+                <p>$${product.price.toLocaleString()}</p>
+                <div class="quantity-controls">
+                  <button class="quantity-btn minus" data-id="${product.id}">-</button>
+                  <span id="quantity-${product.id}">0</span>
+                  <button class="quantity-btn plus" data-id="${product.id}">+</button>
+                </div>
+                <button class="buy-btn" onclick="buyProduct(${product.id})">Comprar</button>
               </div>
-              <button class="buy-btn" onclick="buyProduct(${product.id})">Comprar</button>
-            </div>
-          </div>`;
+            </div>`;
         });
         html += '</div>'; // Cierra la fila
     }
