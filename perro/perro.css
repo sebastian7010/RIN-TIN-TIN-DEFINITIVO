@@ -20,13 +20,14 @@ body {
 
 
 /* ===================================================
-   SEARCH SECTION
-   =================================================== */
+      SEARCH SECTION
+      =================================================== */
 
 .search-section {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    /* 2rem */
     /* Espacio inferior para separar de lo siguiente */
 }
 
@@ -34,20 +35,25 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 400px;
-    /* Ancho máximo para la barra de búsqueda */
+    max-width: 25rem;
+    /* 400px ≈ 25rem */
     width: 100%;
     margin: 1rem auto;
     padding: 0.5rem;
-    border: 2px solid #ccc;
-    border-radius: 8px;
+    border: 0.125rem solid #ccc;
+    /* 2px ≈ 0.125rem */
+    border-radius: 0.5rem;
+    /* 8px ≈ 0.5rem */
     background-color: #fff;
 }
 
 .icon-lupa {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    width: 1.875rem;
+    /* 30px */
+    height: 1.875rem;
+    /* 30px */
+    margin-right: 0.625rem;
+    /* 10px */
     flex-shrink: 0;
 }
 
@@ -61,8 +67,8 @@ body {
 
 
 /* ===================================================
-   BUTTON SECTION (FILTROS)
-   =================================================== */
+      BUTTON SECTION (FILTROS)
+      =================================================== */
 
 .button-section {
     display: flex;
@@ -79,7 +85,8 @@ body {
     border: none;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    border-radius: 8px;
+    border-radius: 0.5rem;
+    /* 8px ≈ 0.5rem */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -91,8 +98,8 @@ body {
 
 
 /* ===================================================
-      HEADER & NAVIGATION
-      =================================================== */
+         HEADER & NAVIGATION
+         =================================================== */
 
 .header {
     background-color: #252523;
@@ -106,7 +113,8 @@ body {
 
 .logo {
     width: 15%;
-    max-width: 100px;
+    max-width: 6.25rem;
+    /* 100px ≈ 6.25rem */
     height: auto;
 }
 
@@ -123,15 +131,18 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 0 20px;
-    height: 60px;
+    padding: 0 1.25rem;
+    /* 20px ≈ 1.25rem */
+    height: 3.75rem;
+    /* 60px ≈ 3.75rem */
 }
 
 .navbar h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 1.5rem;
+    /* 24px ≈ 1.5rem */
     color: white;
     margin: 0;
 }
@@ -139,7 +150,8 @@ body {
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 1.25rem;
+    /* 20px ≈ 1.25rem */
 }
 
 .navbar ul li a {
@@ -160,13 +172,14 @@ body {
 
 
 /* ===================================================
-      MAIN CONTENT & LAYOUT
-      =================================================== */
+         MAIN CONTENT & LAYOUT
+         =================================================== */
 
 .main-content {
     flex: 1;
     padding: 2rem 1rem;
-    max-width: 1200px;
+    max-width: 75rem;
+    /* 1200px ≈ 75rem */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -174,8 +187,8 @@ body {
 
 
 /* ===================================================
-   CAROUSEL / PRODUCT GRID
-   =================================================== */
+      CAROUSEL / PRODUCT GRID
+      =================================================== */
 
 
 /* Contenedor principal: se centra en la página */
@@ -183,7 +196,8 @@ body {
 #carousels-container {
     width: 100%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 1.25rem 0;
+    /* 20px ≈ 1.25rem */
     background-color: white;
     overflow: visible;
     /* Color de fondo suave para separar visualmente */
@@ -191,15 +205,14 @@ body {
 
 .carousel-container {
     position: relative;
-    margin: 20px 0 0;
-    padding-left: 3.rem;
+    margin: 1.25rem 0 0;
+    /* 20px ≈ 1.25rem */
+    padding-left: 3rem;
+    /* Se usa rem para espacios */
     overflow: hidden;
     width: 100%;
     /* Asegurar que ocupe todo el ancho del contenedor padre */
 }
-
-
-/* El track del carrusel */
 
 .carousel-track {
     display: flex;
@@ -211,13 +224,11 @@ body {
     /* Centrado sin el truco de 100vw */
 }
 
-
-/* Configuración para páginas y filas */
-
 .carousel-page {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
+    /* 20px ≈ 1.25rem */
     /* Espacio entre filas (páginas internas) */
 }
 
@@ -225,40 +236,50 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* Seis columnas */
-    gap: 20px;
+    gap: 1.25rem;
+    /* 20px ≈ 1.25rem */
     /* Espacio entre tarjetas */
 }
 
 
 /* ===================================================
-      PRODUCT CARD
-      =================================================== */
+         PRODUCT CARD
+         =================================================== */
 
 .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 0.0625rem solid #ddd;
+    /* 1px ≈ 0.0625rem */
+    padding: 0.625rem;
+    /* 10px ≈ 0.625rem */
     background: #fff;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
+    /* 5px ≈ 0.3125rem */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    width: 280px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    /* 0px 2px 4px */
+    width: 17.5rem;
+    /* 280px ≈ 17.5rem */
 }
 
 .product-card:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    /* 0px 4px 8px */
 }
 
 .product-image {
     width: 100%;
     height: auto;
-    max-height: 150px;
+    max-height: 9.375rem;
+    /* 150px ≈ 9.375rem */
     object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    border-radius: 0.25rem;
+    /* 4px ≈ 0.25rem */
+    margin-bottom: 0.625rem;
+    /* 10px ≈ 0.625rem */
 }
 
 .product-details {
@@ -267,36 +288,46 @@ body {
 }
 
 .product-details h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 1rem;
+    /* 16px ≈ 1rem */
+    margin-bottom: 0.3125rem;
+    /* 5px ≈ 0.3125rem */
     color: #333;
 }
 
 .product-details p {
-    font-size: 14px;
+    font-size: 0.875rem;
+    /* 14px ≈ 0.875rem */
     color: #777;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    /* 10px ≈ 0.625rem */
 }
 
 
 /* ===================================================
-      QUANTITY CONTROLS & BUY BUTTON
-      =================================================== */
+         QUANTITY CONTROLS & BUY BUTTON
+         =================================================== */
 
 .quantity-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 0.625rem;
+    /* 10px ≈ 0.625rem */
+    margin-top: 0.625rem;
+    /* 10px ≈ 0.625rem */
 }
 
 .quantity-btn {
     background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 8px 12px;
-    font-size: 16px;
+    border: 0.0625rem solid #ddd;
+    /* 1px ≈ 0.0625rem */
+    border-radius: 0.3125rem;
+    /* 5px ≈ 0.3125rem */
+    padding: 0.5rem 0.75rem;
+    /* 8px ≈ 0.5rem, 12px ≈ 0.75rem */
+    font-size: 1rem;
+    /* 16px ≈ 1rem */
     font-weight: bold;
     color: #333;
     cursor: pointer;
@@ -314,14 +345,19 @@ body {
 }
 
 .quantity {
-    font-size: 16px;
+    font-size: 1rem;
+    /* 16px ≈ 1rem */
     font-weight: bold;
     color: #333;
-    width: 40px;
+    width: 2.5rem;
+    /* 40px ≈ 2.5rem */
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+    border: 0.0625rem solid #ddd;
+    /* 1px ≈ 0.0625rem */
+    border-radius: 0.25rem;
+    /* 4px ≈ 0.25rem */
+    padding: 0.3125rem;
+    /* 5px ≈ 0.3125rem */
     background-color: #f9f9f9;
 }
 
@@ -330,11 +366,15 @@ body {
     background-color: #25D366;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 14px;
+    padding: 0.625rem 0.9375rem;
+    /* 10px y 15px */
+    font-size: 0.875rem;
+    /* 14px ≈ 0.875rem */
     font-weight: bold;
-    border-radius: 10px;
-    margin-top: 15px;
+    border-radius: 0.625rem;
+    /* 10px ≈ 0.625rem */
+    margin-top: 0.9375rem;
+    /* 15px ≈ 0.9375rem */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -345,18 +385,23 @@ body {
 
 
 /* ===================================================
-      FLOATING CART
-      =================================================== */
+         FLOATING CART
+         =================================================== */
 
 .floating-cart {
     position: fixed;
-    bottom: 33px;
-    right: 20px;
+    bottom: 2.0625rem;
+    /* 33px ≈ 2.0625rem */
+    right: 1.25rem;
+    /* 20px ≈ 1.25rem */
     background-color: #00df82;
-    border: 2px solid #45a049;
+    border: 0.125rem solid #45a049;
+    /* 2px ≈ 0.125rem */
     border-radius: 50%;
-    padding: 10px 12px;
-    box-shadow: 0px 8px 15px #25d365bc;
+    padding: 0.625rem 0.75rem;
+    /* 10px y 12px */
+    box-shadow: 0 0.5rem 0.9375rem #25d365bc;
+    /* 0px 8px 15px */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
@@ -364,44 +409,58 @@ body {
 
 .floating-cart:hover {
     transform: scale(1.2);
-    box-shadow: 0px 12px 20px #45a049c0;
+    box-shadow: 0 0.75rem 1.25rem #45a049c0;
+    /* 0px 12px 20px */
 }
 
 .floating-cart .cart-icon {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    /* 50px ≈ 3.125rem */
+    height: 3.125rem;
+    /* 50px ≈ 3.125rem */
 }
 
 .floating-cart .cart-count {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    /* 10px ≈ 0.625rem */
+    right: 0.625rem;
+    /* 10px ≈ 0.625rem */
     background-color: #ffffff;
     color: #000000;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
+    /* 14px ≈ 0.875rem */
     border-radius: 50%;
-    padding: 1px 2px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.0625rem 0.125rem;
+    /* 1px y 2px */
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
+    /* 0px 2px 5px */
 }
 
 
 /* ===================================================
-      BACK TO TOP
-      =================================================== */
+         BACK TO TOP
+         =================================================== */
 
 #back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.25rem;
+    /* 20px ≈ 1.25rem */
+    right: 1.25rem;
+    /* 20px ≈ 1.25rem */
     background-color: transparent;
     color: #333;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    /* 50px ≈ 3.125rem */
+    height: 3.125rem;
+    /* 50px ≈ 3.125rem */
     text-align: center;
-    line-height: 50px;
+    line-height: 3.125rem;
+    /* 50px ≈ 3.125rem */
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 1.25rem;
+    /* 20px ≈ 1.25rem */
     cursor: pointer;
     transition: background-color 0.3s, opacity 0.3s;
     opacity: 0;
@@ -420,34 +479,42 @@ body {
 
 
 /* ===================================================
-      FOOTER
-      =================================================== */
+         FOOTER
+         =================================================== */
 
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 40px 0 20px;
+    padding: 2.5rem 0 1.25rem;
+    /* 40px top ≈ 2.5rem; 20px bottom ≈ 1.25rem */
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1200px;
+    max-width: 75rem;
+    /* 1200px ≈ 75rem */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
+    /* 20px ≈ 1.25rem */
 }
 
 .footer-section {
     flex: 1;
-    margin-bottom: 20px;
-    min-width: 200px;
+    margin-bottom: 1.25rem;
+    /* 20px ≈ 1.25rem */
+    min-width: 12.5rem;
+    /* 200px ≈ 12.5rem */
 }
 
 .footer-section h3 {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    border-bottom: 0.125rem solid #fff;
+    /* 2px ≈ 0.125rem */
+    padding-bottom: 0.625rem;
+    /* 10px ≈ 0.625rem */
+    margin-bottom: 0.9375rem;
+    /* 15px ≈ 0.9375rem */
 }
 
 .footer-section ul {
@@ -456,7 +523,8 @@ body {
 }
 
 .footer-section ul li {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    /* 10px ≈ 0.625rem */
 }
 
 .footer-section a {
@@ -471,23 +539,28 @@ body {
 
 .newsletter-form {
     display: flex;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
+    /* 15px ≈ 0.9375rem */
 }
 
 .newsletter-form input[type="email"] {
     flex-grow: 1;
-    padding: 10px;
+    padding: 0.625rem;
+    /* 10px ≈ 0.625rem */
     border: none;
-    border-radius: 4px 0 0 4px;
+    border-radius: 0.25rem 0 0 0.25rem;
+    /* 4px ≈ 0.25rem */
 }
 
 .newsletter-form button {
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
+    /* 10px y 15px */
     background-color: #ffd700;
     border: none;
     color: #333;
     font-weight: bold;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0.25rem 0.25rem 0;
+    /* 4px ≈ 0.25rem */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -498,14 +571,18 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 0.9375rem;
+    /* 15px ≈ 0.9375rem */
     justify-content: center;
-    padding: 10px;
+    padding: 0.625rem;
+    /* 10px ≈ 0.625rem */
 }
 
 .social-icons a img {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    /* 30px ≈ 1.875rem */
+    height: 1.875rem;
+    /* 30px ≈ 1.875rem */
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -516,15 +593,18 @@ body {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #555;
+    margin-top: 1.25rem;
+    /* 20px ≈ 1.25rem */
+    padding-top: 1.25rem;
+    /* 20px ≈ 1.25rem */
+    border-top: 0.0625rem solid #555;
+    /* 1px ≈ 0.0625rem */
 }
 
 
 /* ===================================================
-      MODAL
-      =================================================== */
+         MODAL
+         =================================================== */
 
 .modal-overlay {
     position: fixed;
@@ -544,16 +624,21 @@ body {
     max-width: 90%;
     max-height: 90%;
     background: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    /* 8px ≈ 0.5rem */
+    padding: 0.625rem;
+    /* 10px ≈ 0.625rem */
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.5);
+    /* 4px y 15px */
     overflow-y: auto;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 0.625rem;
+    /* 10px ≈ 0.625rem */
+    right: 0.9375rem;
+    /* 15px ≈ 0.9375rem */
     font-size: 2rem;
     font-weight: bold;
     color: #333;
@@ -564,15 +649,18 @@ body {
 .modal-images {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem;
+    /* 10px ≈ 0.625rem */
     justify-content: center;
 }
 
 .modal-images img {
     max-width: 100%;
-    max-height: 300px;
+    max-height: 18.75rem;
+    /* 300px ≈ 18.75rem */
     object-fit: contain;
-    border-radius: 4px;
+    border-radius: 0.25rem;
+    /* 4px ≈ 0.25rem */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -583,8 +671,8 @@ body {
 
 
 /* ===================================================
-   BOTONES DE NAVEGACIÓN DEL CARRUSEL
-   =================================================== */
+      BOTONES DE NAVEGACIÓN DEL CARRUSEL
+      =================================================== */
 
 .carousel-btn {
     position: absolute;
@@ -593,8 +681,10 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    /* 50px ≈ 3.125rem */
+    height: 3.125rem;
+    /* 50px ≈ 3.125rem */
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -606,9 +696,33 @@ body {
 }
 
 .carousel-btn.prev-btn {
-    left: 10px;
+    left: 0.625rem;
+    /* 10px ≈ 0.625rem */
 }
 
 .carousel-btn.next-btn {
-    right: 10px;
+    right: 0.625rem;
+    /* 10px ≈ 0.625rem */
+}
+
+@media (max-width: 480px) {
+    /* Forzar que el grid de la fila tenga 3 columnas */
+    .carousel-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    /* Que cada tarjeta se ajuste al ancho de la celda */
+    .carousel-row .product-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    .carousel-row .product-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
 }
