@@ -2,7 +2,8 @@
 let cart = {}; // Objeto que almacenará la cantidad de cada producto (clave: productId)
 let products = []; // Lista de productos obtenida del JSON
 let fuse; // Instancia de Fuse.js para búsqueda
-let productsPerPage = window.innerWidth <= 480 ? 6 : 12;
+// Si el ancho es menor o igual a 480px (móviles), se muestran 4 productos; de lo contrario, 16.
+let productsPerPage = window.innerWidth <= 480 ? 4 : 16;
 
 let categoryPages = {}; // Página actual por categoría
 
@@ -181,38 +182,32 @@ function renderCategory(categoryId) {
 /** Genera la grid de productos (disposición 6x2) con botón de compra **/
 function generateProductGrid(products) {
     let html = '<div class="carousel-page">';
-    // Si se tienen menos de 6 productos, se completan con placeholders
-    const items = [...products];
-    while (items.length < 6) {
-        items.push(null);
-    }
-    // Se crea una sola fila (en móvil, con el grid se separa en 2 filas)
-    html += '<div class="carousel-row">';
-    items.forEach(item => {
-        if (item) {
+    for (let i = 0; i < products.length; i += productsPerPage) {
+        html += '<div class="carousel-row">';
+        const rowProducts = products.slice(i, i + productsPerPage);
+        rowProducts.forEach(product => {
+            // Genera la tarjeta (product-card) con sus datos
             html += `
-        <div class="product-card" data-id="${item.id}">
-          <img src="${item.image}" alt="${item.name}" class="product-image">
-          <div class="product-details">
-            <h3>${item.name}</h3>
-            <p>$${item.price.toLocaleString()}</p>
-            <div class="quantity-controls">
-              <button class="quantity-btn minus" data-id="${item.id}">-</button>
-              <span id="quantity-${item.id}">0</span>
-              <button class="quantity-btn plus" data-id="${item.id}">+</button>
+          <div class="product-card" data-id="${product.id}">
+            <img src="${product.image}" alt="${product.name}" class="product-image" data-gallery='${JSON.stringify(product.gallery && product.gallery.length ? product.gallery : [product.image])}'>
+            <div class="product-details">
+              <h3>${product.name}</h3>
+              <p>$${product.price.toLocaleString()}</p>
+              <div class="quantity-controls">
+                <button class="quantity-btn minus" data-id="${product.id}">-</button>
+                <span id="quantity-${product.id}">0</span>
+                <button class="quantity-btn plus" data-id="${product.id}">+</button>
+              </div>
+              <button class="buy-btn" onclick="buyProduct(${product.id})">Comprar</button>
             </div>
-            <button class="buy-btn" onclick="buyProduct(${item.id})">Comprar</button>
-          </div>
-        </div>`;
-        } else {
-            // Tarjeta vacía para ocupar el espacio
-            html += `<div class="product-card placeholder"></div>`;
-        }
-    });
-    html += '</div>'; // cierra carousel-row
-    html += '</div>'; // cierra carousel-page
+          </div>`;
+        });
+        html += '</div>'; // Cierra la fila
+    }
+    html += '</div>'; // Cierra la página
     return html;
 }
+
 
 
 

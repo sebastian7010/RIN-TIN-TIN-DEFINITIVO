@@ -705,21 +705,16 @@ body {
     /* 10px ≈ 0.625rem */
 }
 
-@media (max-width: 480px) {
-    /* Forzar que el grid de la fila tenga 3 columnas */
-    .carousel-row {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-    /* Que cada tarjeta se ajuste al ancho de la celda */
-    .carousel-row .product-card {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
+.carousel-row {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.25rem;
+    /* 20px aproximadamente */
 }
 
 @media (max-width: 480px) {
     .carousel-row {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
     .carousel-row .product-card {
         width: 100% !important;
