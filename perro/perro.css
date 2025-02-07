@@ -20,14 +20,13 @@ body {
 
 
 /* ===================================================
-      SEARCH SECTION
-      =================================================== */
+         SEARCH SECTION
+         =================================================== */
 
 .search-section {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-    /* 2rem */
     /* Espacio inferior para separar de lo siguiente */
 }
 
@@ -35,25 +34,20 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 25rem;
-    /* 400px ≈ 25rem */
+    max-width: 400px;
+    /* Ancho máximo para la barra de búsqueda */
     width: 100%;
     margin: 1rem auto;
     padding: 0.5rem;
-    border: 0.125rem solid #ccc;
-    /* 2px ≈ 0.125rem */
-    border-radius: 0.5rem;
-    /* 8px ≈ 0.5rem */
+    border: 2px solid #ccc;
+    border-radius: 8px;
     background-color: #fff;
 }
 
 .icon-lupa {
-    width: 1.875rem;
-    /* 30px */
-    height: 1.875rem;
-    /* 30px */
-    margin-right: 0.625rem;
-    /* 10px */
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
     flex-shrink: 0;
 }
 
@@ -67,8 +61,8 @@ body {
 
 
 /* ===================================================
-      BUTTON SECTION (FILTROS)
-      =================================================== */
+         BUTTON SECTION (FILTROS)
+         =================================================== */
 
 .button-section {
     display: flex;
@@ -85,8 +79,7 @@ body {
     border: none;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
-    border-radius: 0.5rem;
-    /* 8px ≈ 0.5rem */
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -98,8 +91,8 @@ body {
 
 
 /* ===================================================
-         HEADER & NAVIGATION
-         =================================================== */
+            HEADER & NAVIGATION
+            =================================================== */
 
 .header {
     background-color: #252523;
@@ -113,8 +106,7 @@ body {
 
 .logo {
     width: 15%;
-    max-width: 6.25rem;
-    /* 100px ≈ 6.25rem */
+    max-width: 100px;
     height: auto;
 }
 
@@ -131,18 +123,15 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 0 1.25rem;
-    /* 20px ≈ 1.25rem */
-    height: 3.75rem;
-    /* 60px ≈ 3.75rem */
+    padding: 0 20px;
+    height: 60px;
 }
 
 .navbar h1 {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5rem;
-    /* 24px ≈ 1.5rem */
+    font-size: 24px;
     color: white;
     margin: 0;
 }
@@ -150,8 +139,7 @@ body {
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 1.25rem;
-    /* 20px ≈ 1.25rem */
+    gap: 20px;
 }
 
 .navbar ul li a {
@@ -172,13 +160,12 @@ body {
 
 
 /* ===================================================
-         MAIN CONTENT & LAYOUT
-         =================================================== */
+            MAIN CONTENT & LAYOUT
+            =================================================== */
 
 .main-content {
     flex: 1;
-    max-width: 75rem;
-    /* 1200px ≈ 75rem */
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -186,8 +173,8 @@ body {
 
 
 /* ===================================================
-      CAROUSEL / PRODUCT GRID
-      =================================================== */
+         CAROUSEL / PRODUCT GRID
+         =================================================== */
 
 
 /* Contenedor principal: se centra en la página */
@@ -195,8 +182,7 @@ body {
 #carousels-container {
     width: 100%;
     margin: 0 auto;
-    padding: 1.25rem 0;
-    /* 20px ≈ 1.25rem */
+    padding: 20px 0;
     background-color: white;
     overflow: visible;
     /* Color de fondo suave para separar visualmente */
@@ -204,13 +190,14 @@ body {
 
 .carousel-container {
     position: relative;
-    margin: 1.25rem 0 0;
-    /* 20px ≈ 1.25rem */
-    /* Se usa rem para espacios */
+    margin: 20px 0 0;
     overflow: hidden;
     width: 100%;
     /* Asegurar que ocupe todo el ancho del contenedor padre */
 }
+
+
+/* El track del carrusel */
 
 .carousel-track {
     display: flex;
@@ -222,11 +209,13 @@ body {
     /* Centrado sin el truco de 100vw */
 }
 
+
+/* Configuración para páginas y filas */
+
 .carousel-page {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    /* 20px ≈ 1.25rem */
+    gap: 20px;
     /* Espacio entre filas (páginas internas) */
 }
 
@@ -234,50 +223,40 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* Seis columnas */
-    gap: 1.25rem;
-    /* 20px ≈ 1.25rem */
+    gap: 20px;
     /* Espacio entre tarjetas */
 }
 
 
 /* ===================================================
-         PRODUCT CARD
-         =================================================== */
+            PRODUCT CARD
+            =================================================== */
 
 .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 0.0625rem solid #ddd;
-    /* 1px ≈ 0.0625rem */
-    padding: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    border: 1px solid #ddd;
+    padding: 10px;
     background: #fff;
-    border-radius: 0.3125rem;
-    /* 5px ≈ 0.3125rem */
+    border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-    /* 0px 2px 4px */
-    width: 17.5rem;
-    /* 280px ≈ 17.5rem */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: 280px;
 }
 
 .product-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-    /* 0px 4px 8px */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-image {
     width: 100%;
     height: auto;
-    max-height: 9.375rem;
-    /* 150px ≈ 9.375rem */
+    max-height: 150px;
     object-fit: cover;
-    border-radius: 0.25rem;
-    /* 4px ≈ 0.25rem */
-    margin-bottom: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .product-details {
@@ -286,46 +265,36 @@ body {
 }
 
 .product-details h3 {
-    font-size: 1rem;
-    /* 16px ≈ 1rem */
-    margin-bottom: 0.3125rem;
-    /* 5px ≈ 0.3125rem */
+    font-size: 16px;
+    margin-bottom: 5px;
     color: #333;
 }
 
 .product-details p {
-    font-size: 0.875rem;
-    /* 14px ≈ 0.875rem */
+    font-size: 14px;
     color: #777;
-    margin-bottom: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    margin-bottom: 10px;
 }
 
 
 /* ===================================================
-         QUANTITY CONTROLS & BUY BUTTON
-         =================================================== */
+            QUANTITY CONTROLS & BUY BUTTON
+            =================================================== */
 
 .quantity-controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 0.625rem;
-    /* 10px ≈ 0.625rem */
-    margin-top: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .quantity-btn {
     background-color: #f0f0f0;
-    border: 0.0625rem solid #ddd;
-    /* 1px ≈ 0.0625rem */
-    border-radius: 0.3125rem;
-    /* 5px ≈ 0.3125rem */
-    padding: 0.5rem 0.75rem;
-    /* 8px ≈ 0.5rem, 12px ≈ 0.75rem */
-    font-size: 1rem;
-    /* 16px ≈ 1rem */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
     cursor: pointer;
@@ -343,19 +312,14 @@ body {
 }
 
 .quantity {
-    font-size: 1rem;
-    /* 16px ≈ 1rem */
+    font-size: 16px;
     font-weight: bold;
     color: #333;
-    width: 2.5rem;
-    /* 40px ≈ 2.5rem */
+    width: 40px;
     text-align: center;
-    border: 0.0625rem solid #ddd;
-    /* 1px ≈ 0.0625rem */
-    border-radius: 0.25rem;
-    /* 4px ≈ 0.25rem */
-    padding: 0.3125rem;
-    /* 5px ≈ 0.3125rem */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
     background-color: #f9f9f9;
 }
 
@@ -364,15 +328,11 @@ body {
     background-color: #25D366;
     color: white;
     border: none;
-    padding: 0.625rem 0.9375rem;
-    /* 10px y 15px */
-    font-size: 0.875rem;
-    /* 14px ≈ 0.875rem */
+    padding: 10px 15px;
+    font-size: 14px;
     font-weight: bold;
-    border-radius: 0.625rem;
-    /* 10px ≈ 0.625rem */
-    margin-top: 0.9375rem;
-    /* 15px ≈ 0.9375rem */
+    border-radius: 10px;
+    margin-top: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -383,23 +343,18 @@ body {
 
 
 /* ===================================================
-         FLOATING CART
-         =================================================== */
+            FLOATING CART
+            =================================================== */
 
 .floating-cart {
     position: fixed;
-    bottom: 2.0625rem;
-    /* 33px ≈ 2.0625rem */
-    right: 1.25rem;
-    /* 20px ≈ 1.25rem */
+    bottom: 33px;
+    right: 20px;
     background-color: #00df82;
-    border: 0.125rem solid #45a049;
-    /* 2px ≈ 0.125rem */
+    border: 2px solid #45a049;
     border-radius: 50%;
-    padding: 0.625rem 0.75rem;
-    /* 10px y 12px */
-    box-shadow: 0 0.5rem 0.9375rem #25d365bc;
-    /* 0px 8px 15px */
+    padding: 10px 12px;
+    box-shadow: 0px 8px 15px #25d365bc;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
@@ -407,58 +362,44 @@ body {
 
 .floating-cart:hover {
     transform: scale(1.2);
-    box-shadow: 0 0.75rem 1.25rem #45a049c0;
-    /* 0px 12px 20px */
+    box-shadow: 0px 12px 20px #45a049c0;
 }
 
 .floating-cart .cart-icon {
-    width: 3.125rem;
-    /* 50px ≈ 3.125rem */
-    height: 3.125rem;
-    /* 50px ≈ 3.125rem */
+    width: 50px;
+    height: 50px;
 }
 
 .floating-cart .cart-count {
     position: absolute;
-    top: 0.625rem;
-    /* 10px ≈ 0.625rem */
-    right: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    top: 10px;
+    right: 10px;
     background-color: #ffffff;
     color: #000000;
     font-weight: bold;
-    font-size: 0.875rem;
-    /* 14px ≈ 0.875rem */
+    font-size: 14px;
     border-radius: 50%;
-    padding: 0.0625rem 0.125rem;
-    /* 1px y 2px */
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2);
-    /* 0px 2px 5px */
+    padding: 1px 2px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 /* ===================================================
-         BACK TO TOP
-         =================================================== */
+            BACK TO TOP
+            =================================================== */
 
 #back-to-top {
     position: fixed;
-    bottom: 1.25rem;
-    /* 20px ≈ 1.25rem */
-    right: 1.25rem;
-    /* 20px ≈ 1.25rem */
+    bottom: 20px;
+    right: 20px;
     background-color: transparent;
     color: #333;
-    width: 3.125rem;
-    /* 50px ≈ 3.125rem */
-    height: 3.125rem;
-    /* 50px ≈ 3.125rem */
+    width: 50px;
+    height: 50px;
     text-align: center;
-    line-height: 3.125rem;
-    /* 50px ≈ 3.125rem */
+    line-height: 50px;
     border-radius: 50%;
-    font-size: 1.25rem;
-    /* 20px ≈ 1.25rem */
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s, opacity 0.3s;
     opacity: 0;
@@ -477,42 +418,34 @@ body {
 
 
 /* ===================================================
-         FOOTER
-         =================================================== */
+            FOOTER
+            =================================================== */
 
 .footer {
     background-color: #333;
     color: #fff;
-    padding: 2.5rem 0 1.25rem;
-    /* 40px top ≈ 2.5rem; 20px bottom ≈ 1.25rem */
+    padding: 40px 0 20px;
 }
 
 .footer-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 75rem;
-    /* 1200px ≈ 75rem */
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.25rem;
-    /* 20px ≈ 1.25rem */
+    padding: 0 20px;
 }
 
 .footer-section {
     flex: 1;
-    margin-bottom: 1.25rem;
-    /* 20px ≈ 1.25rem */
-    min-width: 12.5rem;
-    /* 200px ≈ 12.5rem */
+    margin-bottom: 20px;
+    min-width: 200px;
 }
 
 .footer-section h3 {
-    border-bottom: 0.125rem solid #fff;
-    /* 2px ≈ 0.125rem */
-    padding-bottom: 0.625rem;
-    /* 10px ≈ 0.625rem */
-    margin-bottom: 0.9375rem;
-    /* 15px ≈ 0.9375rem */
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .footer-section ul {
@@ -521,8 +454,7 @@ body {
 }
 
 .footer-section ul li {
-    margin-bottom: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    margin-bottom: 10px;
 }
 
 .footer-section a {
@@ -537,28 +469,23 @@ body {
 
 .newsletter-form {
     display: flex;
-    margin-top: 0.9375rem;
-    /* 15px ≈ 0.9375rem */
+    margin-top: 15px;
 }
 
 .newsletter-form input[type="email"] {
     flex-grow: 1;
-    padding: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    padding: 10px;
     border: none;
-    border-radius: 0.25rem 0 0 0.25rem;
-    /* 4px ≈ 0.25rem */
+    border-radius: 4px 0 0 4px;
 }
 
 .newsletter-form button {
-    padding: 0.625rem 0.9375rem;
-    /* 10px y 15px */
+    padding: 10px 15px;
     background-color: #ffd700;
     border: none;
     color: #333;
     font-weight: bold;
-    border-radius: 0 0.25rem 0.25rem 0;
-    /* 4px ≈ 0.25rem */
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -569,18 +496,14 @@ body {
 
 .social-icons {
     display: flex;
-    gap: 0.9375rem;
-    /* 15px ≈ 0.9375rem */
+    gap: 15px;
     justify-content: center;
-    padding: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    padding: 10px;
 }
 
 .social-icons a img {
-    width: 1.875rem;
-    /* 30px ≈ 1.875rem */
-    height: 1.875rem;
-    /* 30px ≈ 1.875rem */
+    width: 30px;
+    height: 30px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -591,18 +514,15 @@ body {
 
 .footer-bottom {
     text-align: center;
-    margin-top: 1.25rem;
-    /* 20px ≈ 1.25rem */
-    padding-top: 1.25rem;
-    /* 20px ≈ 1.25rem */
-    border-top: 0.0625rem solid #555;
-    /* 1px ≈ 0.0625rem */
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
 }
 
 
 /* ===================================================
-         MODAL
-         =================================================== */
+            MODAL
+            =================================================== */
 
 .modal-overlay {
     position: fixed;
@@ -622,21 +542,16 @@ body {
     max-width: 90%;
     max-height: 90%;
     background: #fff;
-    border-radius: 0.5rem;
-    /* 8px ≈ 0.5rem */
-    padding: 0.625rem;
-    /* 10px ≈ 0.625rem */
-    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.5);
-    /* 4px y 15px */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
 }
 
 .modal-close {
     position: absolute;
-    top: 0.625rem;
-    /* 10px ≈ 0.625rem */
-    right: 0.9375rem;
-    /* 15px ≈ 0.9375rem */
+    top: 10px;
+    right: 15px;
     font-size: 2rem;
     font-weight: bold;
     color: #333;
@@ -647,18 +562,15 @@ body {
 .modal-images {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    gap: 10px;
     justify-content: center;
 }
 
 .modal-images img {
     max-width: 100%;
-    max-height: 18.75rem;
-    /* 300px ≈ 18.75rem */
+    max-height: 300px;
     object-fit: contain;
-    border-radius: 0.25rem;
-    /* 4px ≈ 0.25rem */
+    border-radius: 4px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -669,8 +581,8 @@ body {
 
 
 /* ===================================================
-      BOTONES DE NAVEGACIÓN DEL CARRUSEL
-      =================================================== */
+         BOTONES DE NAVEGACIÓN DEL CARRUSEL
+         =================================================== */
 
 .carousel-btn {
     position: absolute;
@@ -679,10 +591,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 50%;
-    width: 3.125rem;
-    /* 50px ≈ 3.125rem */
-    height: 3.125rem;
-    /* 50px ≈ 3.125rem */
+    width: 50px;
+    height: 50px;
     color: #fff;
     cursor: pointer;
     display: flex;
@@ -694,20 +604,17 @@ body {
 }
 
 .carousel-btn.prev-btn {
-    left: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    left: 10px;
 }
 
 .carousel-btn.next-btn {
-    right: 0.625rem;
-    /* 10px ≈ 0.625rem */
+    right: 10px;
 }
 
 .carousel-row {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 1.25rem;
-    /* 20px aproximadamente */
+    gap: 20px;
 }
 
 @media (max-width: 480px) {
