@@ -14,8 +14,8 @@ body {
 }
 
 header {
-    background-color: #128c7e;
-    color: white;
+    background-color: #021A1A;
+    color: #00df82;
     padding: 1rem;
     text-align: center;
 }
@@ -37,6 +37,23 @@ header {
     margin: 0 1rem;
 }
 
+.navbar ul li a {
+    text-decoration: none;
+    /* Quitar subrayado */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    /* Sin fondo */
+    color: white;
+    /* Texto blanco */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00df82;
+    /* Cambiar a verde en hover */
+}
+
 .nav-link {
     color: white;
     text-decoration: none;
@@ -45,7 +62,7 @@ header {
 }
 
 .nav-link:hover {
-    color: #f9f871;
+    color: #00df82;
 }
 
 .main-content {
@@ -63,7 +80,7 @@ header {
 
 h2 {
     text-align: center;
-    color: #128c7e;
+    color: #00df82;
     margin-bottom: 1rem;
 }
 

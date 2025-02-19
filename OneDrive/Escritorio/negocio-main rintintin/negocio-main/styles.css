@@ -14,46 +14,115 @@ body {
     background-color: #ffffff;
 }
 
+
+/* Estilos de la cabecera */
+
 .header {
-    background-color: #4FC3F7;
-    padding: -0.5rem;
+    background: linear-gradient(29deg, #fe5c35, #faae42);
+    /* Otros estilos que ya tengas, por ejemplo: */
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     position: relative;
 }
 
+
+/* Contenedor del logo */
+
 .logo {
-    width: 100px;
+    width: 15%;
+    max-width: 100px;
+    /* Limita el tamaño máximo del logo */
     height: auto;
+    /* Mantiene la proporción */
 }
 
+
+/* Estilo del título */
+
 .title {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
-    font-size: 3.5rem;
-    font-weight: 500;
+    /* Centra el título horizontalmente */
+    text-align: center;
 }
 
+
+/* Navegación */
+
 .navbar ul {
-    display: flex;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-link {
-    color: white;
-    margin-top: -20px;
+    color: black;
     text-decoration: none;
-    padding: 1.5rem 1rem;
-    transition: all 0.3s ease;
-    font-size: 22px;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #FE5800;
+    /* Fondo del botón */
+    border-radius: 0.5rem;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    transform: scale(1.1);
+    background-color: rgb(255, 149, 0);
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+/* Animación de rebote */
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.banner {
+    width: 100%;
+    background-color: #FF7300;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.banner-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-text 20s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@keyframes scroll-text {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .cart {
@@ -61,58 +130,82 @@ body {
 }
 
 .cart-icon {
-    width: 32px;
-    height: 32px;
+    width: 10%;
+    /* Ajusta el ancho relativo al contenedor */
+    max-width: 2rem;
+    /* Limita el tamaño máximo */
+    height: auto;
+    /* Mantiene la proporción */
     display: block;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .nav-link.cart {
-    padding: 0.5rem 1rem;
+    padding: 5%;
+    /* Espaciado relativo al tamaño del contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .nav-link.cart:hover .cart-icon {
     transform: scale(1.2);
-    /* Aumenta el tamaño del ícono al pasar el cursor */
     filter: brightness(1.5);
-    /* Hace que el ícono se vea más brillante */
-}
-
-.nav-link.cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
+    /* Aumenta el brillo */
 }
 
 .nav-link.cart:hover {
     transform: scale(1.1);
-    /* Aumenta ligeramente el botón completo al pasar el cursor */
+    /* Escalado del contenedor */
 }
 
 .main-content {
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 5vw 2vw;
+    /* Usa valores relativos al ancho de la ventana */
 }
 
 .cta-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    padding-left: 354px;
-    padding-right: 354px;
+    gap: 1em;
+    margin-bottom: 5vw;
+    padding-left: 10vw;
+    /* Espaciado relativo */
+    padding-right: 10vw;
 }
 
 .cta-button {
     text-align: center;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    /* Espaciado relativo */
+    background-color: #00df82;
+    /* WhatsApp Green */
+    color: white;
+    font-size: 1.2rem;
+    /* Tamaño de texto relativo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 0.5em;
+    /* Espacio entre elementos internos */
+    width: 80%;
+    /* Tamaño máximo relativo */
+    max-width: 20rem;
+    /* Limita el ancho */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.3em);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp {
@@ -121,22 +214,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
-    border-radius: 30px;
+    padding: 1em;
+    border-radius: 2rem;
     text-decoration: none;
-    margin-left: 350px;
-    margin-right: 350px;
-    /* Quita el subrayado */
+    width: 80%;
+    /* Ajuste relativo */
+    max-width: 20rem;
+    /* Limita el ancho */
 }
 
 .whatsapp-icon {
-    width: 90px;
-    /* Reduce el tamaño del icono */
-    height: 90px;
-    /* Mantiene la proporción */
-    margin: -12px 0;
-    /* Ajusta el espacio arriba y abajo */
-    font-size: 2.5rem;
+    width: 5rem!important;
+    height: 5rem!important;
+    object-fit: contain;
+    margin: -1.5rem;
 }
 
 .whatsapp,
@@ -146,28 +237,28 @@ body {
 
 .whatsapp:hover,
 .clicks:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3em);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .cta-text {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    /* Ajuste proporcional */
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.5em;
 }
 
 .clicks {
-    background-color: #128c7e;
-    color: white;
-    font-size: 1.5rem;
+    background: linear-gradient(197deg, #fe5c35, #faae42);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
     font-weight: bold;
-    border-radius: 30px;
-    padding: 30px;
-    border: none;
-    outline: none;
-    margin-left: 350px;
-    margin-right: 350px;
+    border-radius: 2rem;
+    padding: 1em;
+    width: 80%;
+    max-width: 20rem;
+    /* Limita el  */
 }
 
 .cta-title {
@@ -199,19 +290,26 @@ body {
 .pet-images {
     display: flex;
     justify-content: center;
-    gap: 10rem;
+    align-items: center;
+    gap: 2rem;
+    /* Espaciado entre los botones */
+    flex-wrap: nowrap;
+    /* Evita que los botones se vayan a la siguiente línea */
 }
 
 .pet-image-container {
     width: 150px;
+    /* Ancho fijo */
     height: 150px;
+    /* Alto fijo */
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pet-image-container:hover {
-    transform: translateY(-13px) scale(1.1);
+    transform: translateY(-0.8rem) scale(1.1);
+    /* Suave animación */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
@@ -238,6 +336,10 @@ body {
     /* Color de fondo suave para separar visualmente */
 }
 
+.category-title {
+    margin-top: 2rem;
+}
+
 .carousel-container {
     position: relative;
     margin: 20px 0;
@@ -258,11 +360,9 @@ body {
 
 .carousel-page {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, auto);
     gap: 15px;
     flex: 0 0 100%;
-    padding: 15px;
 }
 
 
@@ -356,7 +456,7 @@ body {
 
 .buy-btn {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #25D366;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -589,14 +689,14 @@ body {
 
 .floating-cart {
     position: fixed;
-    bottom: 20px;
+    bottom: 33px;
     right: 20px;
-    background-color: #25d366;
+    background-color: #00df82;
     /* Color llamativo */
     border: 2px solid #45a049;
     /* Borde brillante */
     border-radius: 50%;
-    padding: 15px;
+    padding: 5px 13px;
     box-shadow: 0px 8px 15px #25d365bc;
     /* Sombra más pronunciada */
     cursor: pointer;
@@ -916,4 +1016,191 @@ body {
     fill: white;
     width: 20px;
     height: 20px;
+}
+
+.main-content {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta-button.whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 25px;
+    background-color: #25D366;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.cta-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.whatsapp-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.cta-text {
+    font-size: 1rem;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+.purchases-counter {
+    text-align: center;
+    margin: 1px auto;
+    /* Ajusta el margen según tu layout */
+    padding: 20px;
+}
+
+.purchases-counter .title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 4rem;
+}
+
+.text-counter {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+
+/* Fondo semi-transparente para el modal */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Pantalla en gris oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+
+/* Contenido del modal */
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+
+/* Botón de cerrar */
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 2100;
+}
+
+
+/* Contenedor de imágenes en el modal */
+
+.modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-images img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-images img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ===== MEDIA QUERY: RESPONSIVE HEADER ===== */
+
+@media (max-width: 600px) {
+    /* Cambiar a disposición vertical */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    /* Logo: reducir tamaño y separar del título */
+    .logo {
+        height: 40px;
+        margin-bottom: 0.5rem;
+    }
+    /* Título: dejarlo en posición normal (estática) para que se centre naturalmente y reducir tamaño */
+    .title {
+        position: static;
+        transform: none;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    /* Menú: pasar a columna, centrar elementos y ajustar tamaño */
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .navbar ul li a {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
 }

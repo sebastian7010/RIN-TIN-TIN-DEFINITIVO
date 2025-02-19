@@ -1,131 +1,344 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const products = [
-        // CategoryId: 1 - Accesorios para Perros
-        { id: 1, categoryId: 1, name: "Collar Reflectante", price: 30.0, description: "Collar para mayor visibilidad en la noche", image: "https://via.placeholder.com/150" },
-        { id: 2, categoryId: 1, name: "Arnés Ajustable", price: 40.0, description: "Arnés cómodo y seguro", image: "https://via.placeholder.com/150" },
-        { id: 3, categoryId: 1, name: "Correa Extensible", price: 25.0, description: "Correa con sistema extensible para mayor alcance", image: "https://via.placeholder.com/150" },
-        { id: 4, categoryId: 1, name: "Cama Ortopédica", price: 70.0, description: "Cama cómoda para el descanso del perro", image: "https://via.placeholder.com/150" },
-        { id: 5, categoryId: 1, name: "Plato Antideslizante", price: 15.0, description: "Plato que evita derrames de comida", image: "https://via.placeholder.com/150" },
-        { id: 6, categoryId: 1, name: "Botella de Agua Portátil", price: 20.0, description: "Botella portátil para hidratar a tu perro", image: "https://via.placeholder.com/150" },
-        { id: 7, categoryId: 1, name: "Cortaúñas", price: 10.0, description: "Herramienta para mantener las uñas del perro cortas", image: "https://via.placeholder.com/150" },
-        { id: 8, categoryId: 1, name: "Bolsa de Transporte", price: 50.0, description: "Bolsa cómoda para transportar perros pequeños", image: "https://via.placeholder.com/150" },
-        { id: 9, categoryId: 1, name: "Abrigo Impermeable", price: 35.0, description: "Abrigo para proteger del frío y la lluvia", image: "https://via.placeholder.com/150" },
-        { id: 10, categoryId: 1, name: "Cepillo para Pelo", price: 12.0, description: "Cepillo para eliminar el pelo suelto", image: "https://via.placeholder.com/150" },
+// Importar Fuse.js (versión ES Module)
+import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.esm.js';
+// Importar categorías desde el módulo externo
+import { categories } from './categories.js';
 
-        // CategoryId: 2 - Comida Premium para Perros
-        { id: 11, categoryId: 2, name: "Croquetas de Salmón", price: 45.0, description: "Alimento rico en omega 3 para un pelaje brillante", image: "https://via.placeholder.com/150" },
-        { id: 12, categoryId: 2, name: "Alimento Hipoalergénico", price: 60.0, description: "Ideal para perros con alergias alimentarias", image: "https://via.placeholder.com/150" },
-        { id: 13, categoryId: 2, name: "Comida Orgánica", price: 55.0, description: "Alimento orgánico sin aditivos", image: "https://via.placeholder.com/150" },
-        { id: 14, categoryId: 2, name: "Snacks Naturales", price: 20.0, description: "Snacks saludables y ricos en nutrientes", image: "https://via.placeholder.com/150" },
-        { id: 15, categoryId: 2, name: "Comida para Cachorros", price: 50.0, description: "Alimento especializado para cachorros en crecimiento", image: "https://via.placeholder.com/150" },
-        { id: 16, categoryId: 2, name: "Comida para Perros Senior", price: 45.0, description: "Nutrición balanceada para perros mayores", image: "https://via.placeholder.com/150" },
-        { id: 17, categoryId: 2, name: "Croquetas de Pollo", price: 40.0, description: "Croquetas con sabor a pollo", image: "https://via.placeholder.com/150" },
-        { id: 18, categoryId: 2, name: "Croquetas sin Grano", price: 65.0, description: "Alimento ideal para perros sensibles", image: "https://via.placeholder.com/150" },
-        { id: 19, categoryId: 2, name: "Barritas Masticables", price: 15.0, description: "Barritas enriquecidas con vitaminas", image: "https://via.placeholder.com/150" },
-        { id: 20, categoryId: 2, name: "Comida Económica", price: 30.0, description: "Alimento de calidad al mejor precio", image: "https://via.placeholder.com/150" },
+// Variables globales
+let cart = {}; // Objeto para el carrito (clave: productId, valor: cantidad)
+let products = []; // Lista de productos
+let fuse; // Instancia de Fuse.js para búsqueda
+const productsPerPage = 16;
+let currentPage = 1;
+let filteredProducts = [];
 
-        // CategoryId: 3 - Juguetes para Perros
-        { id: 21, categoryId: 3, name: "Pelota de Goma", price: 10.0, description: "Pelota resistente ideal para juegos de lanzar", image: "https://via.placeholder.com/150" },
-        { id: 22, categoryId: 3, name: "Juguete Mordedor", price: 12.0, description: "Juguete ideal para la dentición", image: "https://via.placeholder.com/150" },
-        { id: 23, categoryId: 3, name: "Disco Volador", price: 15.0, description: "Disco para juegos al aire libre", image: "https://via.placeholder.com/150" },
-        { id: 24, categoryId: 3, name: "Juguete de Peluche", price: 18.0, description: "Peluche suave para juegos y compañía", image: "https://via.placeholder.com/150" },
-        { id: 25, categoryId: 3, name: "Juguete de Cuerda", price: 8.0, description: "Cuerda ideal para juegos de tirar y masticar", image: "https://via.placeholder.com/150" },
-        { id: 26, categoryId: 3, name: "Ratón de Juguete", price: 5.0, description: "Juguete pequeño con sonido para juegos", image: "https://via.placeholder.com/150" },
-        { id: 27, categoryId: 3, name: "Juguete Interactivo con Luces", price: 25.0, description: "Juguete que estimula la actividad física", image: "https://via.placeholder.com/150" },
-        { id: 28, categoryId: 3, name: "Láser para Perros", price: 20.0, description: "Láser para juegos y ejercicio", image: "https://via.placeholder.com/150" },
-        { id: 29, categoryId: 3, name: "Hueso de Goma", price: 12.0, description: "Hueso resistente ideal para masticar", image: "https://via.placeholder.com/150" },
-        { id: 30, categoryId: 3, name: "Juguete Kong", price: 35.0, description: "Juguete rellenable para mantener a tu perro ocupado", image: "https://via.placeholder.com/150" }
-    ];
+// Opciones de Fuse.js
+const fuseOptions = {
+    keys: ['name', 'description'],
+    threshold: 0.4,
+};
 
+/** Renderizar productos en el contenedor usando DocumentFragment **/
+function renderProducts(productsToRender) {
+    const productGrid = document.getElementById("product-grid");
+    productGrid.innerHTML = "";
 
-    let currentPage = 1;
-    const itemsPerPage = 16;
-    let filteredProducts = [...products];
-
-    // Elementos del DOM
-    const productGrid = document.querySelector('.product-grid');
-    const searchInput = document.getElementById('search-input');
-    const categorySelect = document.getElementById('category-select');
-    const prevButton = document.getElementById('prev-page');
-    const nextButton = document.getElementById('next-page');
-    const currentPageDisplay = document.getElementById('current-page');
-
-    // Renderizar productos
-    function renderProducts(page = 1) {
-        productGrid.innerHTML = '';
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
-        const productsToShow = filteredProducts.slice(start, end);
-
-        productsToShow.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}" class="product-image">
-                <div class="product-details">
-                    <h3>${product.name}</h3>
-                    <p>$${product.price.toFixed(2)}</p>
-                    <p>${product.description}</p>
-                    <button class="buy-btn" onclick="handleSingleBuyClick(${product.id}, '${product.name}', ${product.price})">Comprar</button>
-                </div>
-            `;
-            productGrid.appendChild(productCard);
-        });
-
-        currentPageDisplay.textContent = page;
+    if (productsToRender.length === 0) {
+        productGrid.innerHTML = "<p>No se encontraron productos.</p>";
+        return;
     }
 
-    // Filtrar productos por categoría
-    function filterByCategory(categoryId) {
-        if (categoryId === 'all') {
-            filteredProducts = [...products];
+    // Crear un DocumentFragment para insertar todas las cards a la vez
+    const fragment = document.createDocumentFragment();
+
+    productsToRender.forEach(product => {
+        const card = document.createElement("div");
+        card.classList.add("product-card");
+        // Estructura de la card con controles de cantidad y lazy loading en la imagen
+        card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" data-gallery='${JSON.stringify(product.gallery || [product.image])}'>
+      <div class="product-details">
+         <h3>${product.name}</h3>
+         <p>$${product.price.toLocaleString()}</p>
+         <p>${product.description}</p>
+         <div class="quantity-controls">
+           <button class="quantity-btn minus" data-id="${product.id}">-</button>
+           <span id="quantity-${product.id}">0</span>
+           <button class="quantity-btn plus" data-id="${product.id}">+</button>
+         </div>
+         <button class="buy-btn" onclick="handleSingleBuyClick(${product.id}, '${product.name}', ${product.price})">Comprar</button>
+      </div>
+    `;
+        fragment.appendChild(card);
+    });
+
+    // Insertar el fragment en el contenedor de productos
+    productGrid.appendChild(fragment);
+
+    // Asignar eventos a las imágenes y botones
+    assignImageClickEvents();
+    attachQuantityButtons();
+}
+
+/** Cargar productos desde products.json **/
+async function loadProducts() {
+    try {
+        const response = await fetch('./products.json');
+        if (!response.ok) throw new Error(`Error al cargar products.json: ${response.status}`);
+        products = await response.json();
+        fuse = new Fuse(products, fuseOptions);
+        filteredProducts = products; // Inicialmente se muestran todos
+        renderPage();
+    } catch (error) {
+        console.error("Error al cargar los productos:", error);
+    }
+}
+
+/** Renderizar la página actual (paginación) **/
+function renderPage() {
+    const start = (currentPage - 1) * productsPerPage;
+    const end = start + productsPerPage;
+    const productsToRender = filteredProducts.slice(start, end);
+    renderProducts(productsToRender);
+
+    document.getElementById("current-page").textContent = currentPage;
+    document.getElementById("prev-page").disabled = currentPage === 1;
+    document.getElementById("next-page").disabled = end >= filteredProducts.length;
+}
+
+/** Inicializar búsqueda en tiempo real **/
+function initializeSearch() {
+    const searchInput = document.getElementById("search-input");
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim();
+        if (query === "") {
+            filteredProducts = products;
         } else {
-            filteredProducts = products.filter(product => product.categoryId === parseInt(categoryId));
+            const results = fuse.search(query);
+            filteredProducts = results.map(result => result.item);
         }
         currentPage = 1;
-        renderProducts(currentPage);
-    }
+        renderPage();
+    });
+}
 
-    // Buscar productos por nombre o descripción
-    function searchProducts(query) {
-        const lowerQuery = query.toLowerCase();
-        filteredProducts = products.filter(product =>
-            product.name.toLowerCase().includes(lowerQuery) || product.description.toLowerCase().includes(lowerQuery)
-        );
+/** Inicializar el filtro por categoría **/
+function initializeCategoryFilter() {
+    const categorySelect = document.getElementById("category-select");
+    categorySelect.addEventListener("change", () => {
+        const selected = categorySelect.value;
+        if (selected === "all") {
+            filteredProducts = products;
+        } else {
+            // Convertir el valor a número si los categoryId en products son numéricos.
+            filteredProducts = products.filter(product => product.categoryId === Number(selected));
+        }
         currentPage = 1;
-        renderProducts(currentPage);
-    }
+        renderPage();
+    });
+}
 
-    // Manejar la paginación
-    function handlePagination(direction) {
-        const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-
-        if (direction === 'prev' && currentPage > 1) {
+/** Paginación: Asignar eventos a los botones de paginación **/
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("prev-page").addEventListener("click", () => {
+        if (currentPage > 1) {
             currentPage--;
-        } else if (direction === 'next' && currentPage < totalPages) {
-            currentPage++;
+            renderPage();
         }
-
-        // Actualizar el estado de los botones de paginación
-        prevButton.disabled = currentPage === 1;
-        nextButton.disabled = currentPage === totalPages;
-
-        renderProducts(currentPage);
-    }
-
-    // Eventos
-    categorySelect.addEventListener('change', e => filterByCategory(e.target.value));
-    searchInput.addEventListener('input', e => searchProducts(e.target.value));
-    prevButton.addEventListener('click', () => handlePagination('prev'));
-    nextButton.addEventListener('click', () => handlePagination('next'));
-
-    // Inicialización
-    renderProducts(currentPage);
+    });
+    document.getElementById("next-page").addEventListener("click", () => {
+        if (currentPage * productsPerPage < filteredProducts.length) {
+            currentPage++;
+            renderPage();
+        }
+    });
 });
 
-// Función para manejar clic en el botón de comprar
-function handleSingleBuyClick(productId, productName, productPrice) {
-    const message = `Hola, estoy interesado en comprar el producto "${productName}" por un valor de $${productPrice.toFixed(2)}`;
-    const whatsappURL = `https://wa.me/+573108853158?text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL, '_blank');
+/** Función para compra vía WhatsApp **/
+function handleSingleBuyClick(id, name, price) {
+    const message = `Hola, estoy interesado en comprar el producto: ${name} (ID: ${id}). Precio: $${price.toLocaleString()}`;
+    const phone = "573108853158";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
 }
+window.handleSingleBuyClick = handleSingleBuyClick;
+
+/** Actualiza el carrito flotante **/
+function updateFloatingCart(productId, change) {
+    productId = String(productId);
+    if (!cart[productId]) {
+        cart[productId] = 0;
+    }
+    cart[productId] += change;
+    if (cart[productId] < 0) cart[productId] = 0;
+    updateCartDisplay();
+}
+
+/** Actualiza la visualización del contador en el carrito **/
+function updateCartDisplay() {
+    let total = 0;
+    for (const id in cart) {
+        total += cart[id];
+    }
+    const cartCountElem = document.getElementById("cart-count");
+    if (cartCountElem) {
+        cartCountElem.textContent = total;
+        cartCountElem.style.display = total > 0 ? "flex" : "none";
+    }
+}
+
+/** Actualiza la cantidad mostrada en cada tarjeta **/
+function updateQuantityDisplay(productId) {
+    productId = String(productId);
+    const quantityElem = document.getElementById(`quantity-${productId}`);
+    if (quantityElem) {
+        quantityElem.textContent = cart[productId] || 0;
+    }
+}
+
+/** Asigna eventos a las imágenes para abrir modal **/
+function assignImageClickEvents() {
+    const productImages = document.querySelectorAll('.product-image');
+    productImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+            openModal(img);
+        });
+    });
+}
+
+/** Asigna eventos a los botones de cantidad (sin clonar) **/
+function attachQuantityButtons() {
+    const plusButtons = document.querySelectorAll('.quantity-btn.plus');
+    plusButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productId = button.dataset.id;
+            updateFloatingCart(productId, 1);
+            updateQuantityDisplay(productId);
+            const cardElement = button.closest('.product-card');
+            if (cardElement) {
+                flyToCart(cardElement, true);
+            }
+        });
+    });
+    const minusButtons = document.querySelectorAll('.quantity-btn.minus');
+    minusButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productId = button.dataset.id;
+            updateFloatingCart(productId, -1);
+            updateQuantityDisplay(productId);
+            const cardElement = button.closest('.product-card');
+            if (cardElement) {
+                flyToCart(cardElement, false);
+            }
+        });
+    });
+}
+
+/** Función para animar la tarjeta hacia el carrito (opcional) **/
+function flyToCart(cardElement, isAdding) {
+    const clonedElement = cardElement.cloneNode(true);
+    document.body.appendChild(clonedElement);
+    const cardRect = cardElement.getBoundingClientRect();
+    const cartElement = document.getElementById('floating-cart');
+    const cartRect = cartElement.getBoundingClientRect();
+
+    Object.assign(clonedElement.style, {
+        position: 'fixed',
+        zIndex: '1000',
+        pointerEvents: 'none',
+        transition: 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease',
+        willChange: 'transform, opacity'
+    });
+
+    if (isAdding) {
+        clonedElement.style.top = cardRect.top + 'px';
+        clonedElement.style.left = cardRect.left + 'px';
+        clonedElement.style.width = cardRect.width + 'px';
+        clonedElement.style.height = cardRect.height + 'px';
+        clonedElement.style.transform = 'none';
+        clonedElement.style.opacity = '1';
+
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const cardCenterY = cardRect.top + cardRect.height / 2;
+        const cartCenterX = cartRect.left + cartRect.width / 2;
+        const cartCenterY = cartRect.top + cartRect.height / 2;
+        const deltaX = cartCenterX - cardCenterX;
+        const deltaY = cartCenterY - cardCenterY;
+
+        requestAnimationFrame(() => {
+            clonedElement.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(0.2)`;
+            clonedElement.style.opacity = '0';
+        });
+    } else {
+        clonedElement.style.top = cartRect.top + 'px';
+        clonedElement.style.left = cartRect.left + 'px';
+        clonedElement.style.width = cartRect.width + 'px';
+        clonedElement.style.height = cartRect.height + 'px';
+        clonedElement.style.transform = 'none';
+        clonedElement.style.opacity = '1';
+
+        const cardCenterX = cardRect.left + cardRect.width / 2;
+        const cardCenterY = cardRect.top + cardRect.height / 2;
+        const cartCenterX = cartRect.left + cartRect.width / 2;
+        const cartCenterY = cartRect.top + cartRect.height / 2;
+        const deltaX = cardCenterX - cartCenterX;
+        const deltaY = cardCenterY - cartCenterY;
+
+        requestAnimationFrame(() => {
+            clonedElement.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(1)`;
+            clonedElement.style.opacity = '0';
+        });
+    }
+    setTimeout(() => {
+        if (clonedElement.parentNode) clonedElement.parentNode.removeChild(clonedElement);
+    }, 900);
+}
+
+/** Función para abrir el modal con imágenes **/
+function openModal(imageElement) {
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalImagesContainer = document.getElementById('modal-images');
+    modalImagesContainer.innerHTML = "";
+    const galleryData = imageElement.getAttribute('data-gallery');
+    let images = [];
+    try {
+        images = JSON.parse(galleryData);
+    } catch (error) {
+        images = [imageElement.src];
+    }
+    images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = imageElement.alt || 'Producto';
+        modalImagesContainer.appendChild(img);
+    });
+    modalOverlay.style.display = 'flex';
+}
+
+/** Función para cerrar el modal **/
+function closeModal() {
+    const modalOverlay = document.getElementById('modal-overlay');
+    modalOverlay.style.display = 'none';
+}
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) closeModal();
+});
+window.openModal = openModal;
+window.assignImageClickEvents = assignImageClickEvents; // Asegúrate de que assignImageClickEvents esté definida
+
+/** Función para enviar el carrito a WhatsApp **/
+function sendCartToWhatsApp() {
+    let message = "Hola, estoy interesado en comprar los siguientes productos:\n";
+    let totalPrice = 0;
+    let hasProducts = false;
+    for (let productId in cart) {
+        if (cart[productId] > 0) {
+            const product = products.find(p => String(p.id) === productId);
+            if (product) {
+                hasProducts = true;
+                const qty = cart[productId];
+                const price = product.price;
+                const subtotal = qty * price;
+                totalPrice += subtotal;
+                message += `\n*${product.name}*\nCantidad: ${qty}\nPrecio unitario: $${price.toLocaleString()}\nSubtotal: $${subtotal.toLocaleString()}\nImagen: ${product.image}\n`;
+            }
+        }
+    }
+    if (!hasProducts) {
+        alert("No has agregado ningún producto al carrito.");
+        return;
+    }
+    message += `\nTotal a pagar: $${totalPrice.toLocaleString()}`;
+    const phone = "573108853158";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+}
+window.sendCartToWhatsApp = sendCartToWhatsApp;
+
+/** Inicializar todo al cargar el DOM **/
+document.addEventListener("DOMContentLoaded", () => {
+    loadProducts();
+    initializeSearch();
+    initializeCategoryFilter();
+});

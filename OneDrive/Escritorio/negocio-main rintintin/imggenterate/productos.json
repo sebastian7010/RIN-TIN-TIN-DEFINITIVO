@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/croquta%20pastor%20aleman.jpeg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/croquta%20pastor%20aleman.jpeg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/e0d2390c15c58de14965ee0e13fe3e7a.jpg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/e0d2390c15c58de14965ee0e13fe3e7a.jpg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(1).jpeg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(1).jpeg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(2).jpeg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(2).jpeg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(3).jpeg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(3).jpeg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(4).jpeg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM%20(4).jpeg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "categoryId": 1,
+    "name": "Collar para Perro",
+    "price": 45000,
+    "description": "Collar ajustable para perros pequeños y medianos",
+    "image": "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM.jpeg",
+    "gallery": [
+      "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/comidaPerrosPremiunImagenes/WhatsApp%20Image%202025-02-08%20at%203.21.27%20PM.jpeg",
+      "https://otro-enlace-ejemplo.com/imagen2.jpg",
+      "https://otro-enlace-ejemplo.com/imagen3.jpg"
+    ]
+  }
+]

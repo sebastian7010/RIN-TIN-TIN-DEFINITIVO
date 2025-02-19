@@ -4,44 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Market</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <meta name="description" content="Pet Market - El mejor lugar para encontrar todo tipo de productos para perros y gatos en Colombia. Compra collares, juguetes, camas y más. Envíos rápidos y atención inmediata.">
+    <meta name="keywords" content="productos para perros, productos para gatos, accesorios para mascotas, collares, juguetes para perros, camas para gatos, Pet Market">
+    <meta name="author" content="Pet Market">
+    <meta name="geo.region" content="CO">
+    <meta name="geo.placename" content="Colombia">
+    <meta name="language" content="es-CO">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="tu-codigo-de-verificacion" />
+    <!-- Opcional: Verifica tu sitio en Google -->
+
+    <title>GATON Y PERRON | Accesorios y Productos para Mascotas en Colombia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="Pet Market - Productos para Mascotas">
+    <meta property="og:description" content="Descubre todo tipo de productos para perros y gatos en Pet Market. Compra fácilmente y recibe atención inmediata.">
+    <meta property="og:image" content="https://example.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pet Market - Productos para Mascotas">
+    <meta name="twitter:description" content="Descubre todo tipo de productos para perros y gatos en Pet Market. Compra fácilmente y recibe atención inmediata.">
+    <meta name="twitter:image" content="https://example.com/assets/twitter-image.jpg">
 
 </head>
 
 <body>
     <header class="header">
-        <img src="assets/noun-dog-and-cat-5844537.svg" alt="Rin Tin Tin Logo" class="logo">
-        <h1 class="title">RIN TIN TIN</h1>
+        <img src="assets/logo provicinal.jpeg" alt="Logo" class="logo">
+
+        <!-- Título en el centro -->
+        <h1 class="title">PERROTE Y GATOTE</h1>
+
+        <!-- Botón al final -->
         <nav class="navbar">
             <ul>
-                <li><a href="catalogo/catalogo.html" class="nav-link">Catálogo</a></li>
-                <li> <a href="https://wa.me/573108853158" class="nav-link" target="_blank" rel="noopener noreferrer">Contacto</a>
-                </li>
                 <li>
-                    <a href="#" class="nav-link cart"><img src="assets/noun-phone-7377179.svg" alt="Carrito" class="cart-icon"></a>
+                    <a href="./catalogo/catalogo.html" class="nav-link">Catálogo</a>
                 </li>
             </ul>
         </nav>
     </header>
 
+    <div class="banner">
+        <div class="banner-text">
+            ¡No preguntes si hay solo pide! 🐶🐱 &nbsp;&nbsp;&nbsp;&nbsp; ¡la tienda online mas grande de Colmobia! 🐶🐱 &nbsp;&nbsp;&nbsp;&nbsp; ¡Aprovecha nuestras ofertas exclusivas para mascotas! 🐶🐱 &nbsp;&nbsp;&nbsp;&nbsp; ¡No preguntes si hay solo pide! 🐶🐱
+            &nbsp;&nbsp;&nbsp;&nbsp; ¡la tienda online mas grande de Colmobia! 🐶🐱
+        </div>
+        <div class="banner-text">
+            ¡No preguntes si hay solo pide! 🐶🐱 &nbsp;&nbsp;&nbsp;&nbsp; ¡la tienda online mas grande de Colmobia! 🐶🐱 &nbsp;&nbsp;&nbsp;&nbsp; ¡Aprovecha nuestras ofertas exclusivas para mascotas! 🐶🐱 &nbsp;&nbsp;&nbsp;&nbsp; ¡No preguntes si hay solo pide! 🐶🐱
+            &nbsp;&nbsp;&nbsp;&nbsp; ¡la tienda online mas grande de Colmobia! 🐶🐱
+        </div>
+    </div>
+
+
+
+
     <main class="main-content">
         <div class="cta-container">
-            <a href="#" class="cta-button whatsapp" onclick="openWhatsApp()">
+            <a href="#" class="cta-button whatsapp" onclick="goToWhatsAppContact()">
                 <span class="cta-title">COMPRA EN</span>
-                <img src="assets/noun-whatsapp-6843546.svg" alt="WhatsApp Icon" class="whatsapp-icon">
+                <img src="./assets/whatsapp-icon.svg" alt="WhatsApp Icon" class="whatsapp-icon">
                 <span class="cta-text">
                     RESPONDEMOS EN<br>
                     MENOS 2 MINUTOS
                 </span>
             </a>
 
-
             <button class="cta-button clicks" onclick="scrollToCarousels()">
                 COMPRA EN<br>
                 2 CLICKS
             </button>
+
 
             <section class="search-section">
                 <div class="search-bar-container">
@@ -64,7 +106,7 @@
                     </div>
                     <div class="pet-image-container">
                         <a href="gato/gato.html">
-                            <img src="assets/gato.jpeg" alt="Gato sonriente" class="pet-image">
+                            <img src="assets/gato.webp" alt="Gato sonriente" class="pet-image">
                         </a>
                     </div>
                 </div>
@@ -80,6 +122,12 @@
         <img src="assets/noun-purchase-2804281.svg" alt="Carrito" class="cart-icon">
         <span id="cart-count" class="cart-count">0</span>
     </div>
+
+    <div id="purchases-counter-container" class="purchases-counter">
+        <div class="text-counter">Compras realizadas</div>
+        <div id="counter" class="counter">0</div>
+    </div>
+
 
     <footer class="footer">
         <div class="footer-content">
@@ -132,8 +180,22 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script src="categories.js"></script>
-    <script src="script.js"></script>
+
+
+
+    <!-- Modal para ver la imagen ampliada -->
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <div id="modal-images" class="modal-images">
+                <!-- Se cargarán las imágenes aquí -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script type="module" src="script.js"></script>
 
 </body>
 
