@@ -298,6 +298,7 @@ body {
 }
 
 .pet-image-container {
+    background: linear-gradient(-29deg, #ff1a4a, #faae42);
     width: 150px;
     /* Ancho fijo */
     height: 150px;
