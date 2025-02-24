@@ -104,6 +104,7 @@ categories.forEach(category => {
 // Archivo de salida (se creará en la raíz del proyecto)
 const outputFile = 'productos.json';
 
+
 // Escribe el JSON en el archivo con indentación de 2 espacios para mayor legibilidad
 fs.writeFileSync(outputFile, JSON.stringify(productos, null, 2));
 
