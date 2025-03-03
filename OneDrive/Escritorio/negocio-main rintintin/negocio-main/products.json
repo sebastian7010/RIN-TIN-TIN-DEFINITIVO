@@ -1,79 +1,79 @@
 [{
         "id": 1,
-        "categoryId": 1,
-        "name": "Collar para elefante",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "categoryId": 2,
+        "name": "Royal Canin Alimento para Perro Yorkshire Terrier Puppy",
+        "price": 90250,
+        "description": "Alimento específico para cachorros Yorkshire Terrier de 2 meses a 10 meses de edad. Está enriquecido con ácidos grasos omega-3 y 6, EPA y DHA, ácidos grasos y biotina para ayudar a mantener la salud del hermoso pelaje largo.",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r010.webp",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/imagenesAccesoriosperro/Captura%20de%20pantalla%202025-01-21%20083506%20(1).png",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r011.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r012.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r013.webp"
         ]
     },
     {
         "id": 2,
-        "categoryId": 1,
-        "name": "Collar para Perro",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "categoryId": 2,
+        "name": "Royal Canin Alimento para Perros Mini Puppy",
+        "price": 225160,
+        "description": "Proporciona una nutrición especializada y equilibrada para cachorros de razas pequeñas, asegurando un crecimiento saludable y apoyando su bienestar general.",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r020.webp",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/imagenesAccesoriosperro/Captura%20de%20pantalla%202025-01-21%20083506%20(1).png",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r021.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r020.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r022.webp"
         ]
     },
     {
         "id": 3,
-        "categoryId": 1,
-        "name": "Collar para Perro",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "categoryId": 2,
+        "name": "Royal Canin Alimento para Cachorros Mini Indoor",
+        "price": 99150,
+        "description": "Es un alimento para perros que cumple con las necesidades nutricionales que para tu cachorro son importantes en sus primeros años como en su edad adulta, especialmente cuando su sistema inmunológico aún se está desarrollando.",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r030.webp",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/imagenesAccesoriosperro/Captura%20de%20pantalla%202025-01-21%20083506%20(1).png",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r031.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r030.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r031.webp"
         ]
     },
     {
         "id": 4,
-        "categoryId": 1,
-        "name": "Collar para Perro",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "categoryId": 2,
+        "name": "Royal Canin Alimento para Perro Poodle Adulto",
+        "price": 103350,
+        "description": "Esta fórmula contiene nutrientes que contribuyen a la salud del pelaje lanoso. Enriquecido con ácidos grasos, omega 3 y aceite de borraja. El aporte adaptado de proteínas contribuye al continuo crecimiento del pelo. Ayuda a reducir la formación de sarro, gracias a los quelantes de calcio.",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r040.webp",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/imagenesAccesoriosperro/Captura%20de%20pantalla%202025-01-21%20083506%20(1).png",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r041.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r042.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r043.webp"
         ]
     },
     {
         "id": 5,
-        "categoryId": 1,
-        "name": "Collar para Perro",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "categoryId": 2,
+        "name": "Royal Canin Alimento para Perros Adultos de Razas Pequeñas Exigent Mini",
+        "price": 73500,
+        "description": "descripcioAlimento completo para perros adultos y maduros de razas pequeñas (de 1 a 10 kg) - A partir de los 10 meses de edad. Perros con apetito caprichoso.ooooon",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r070.webp",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/imagenesAccesoriosperro/Captura%20de%20pantalla%202025-01-21%20083506%20(1).png",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r071.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r072.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r073.webp"
         ]
     },
     {
         "id": 6,
-        "categoryId": 1,
-        "name": "Collar para Perro",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "categoryId": 2,
+        "name": "Royal Canin Alimento Para Perro Adulto Chihuahua",
+        "price": 87350,
+        "description": "Es un alimento apto para chihuahuas de más de 8 meses, ha sido especialmente formulado teniendo en cuenta las necesidades nutricionales de tu perro adulto. Favorece la función digestiva, lo que reduce la cantidad de heces.",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r060.webp",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://sebastian7010.github.io/RIN-TIN-TIN-DEFINITIVO/imagenesAccesoriosperro/Captura%20de%20pantalla%202025-01-21%20083506%20(1).png",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r061.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r060.webp",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/r062.webp"
         ]
     },
     {
