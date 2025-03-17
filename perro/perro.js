@@ -3,7 +3,7 @@ let cart = {}; // Objeto que almacenará la cantidad de cada producto (clave: pr
 let products = []; // Lista de productos obtenida del JSON
 let fuse; // Instancia de Fuse.js para búsqueda
 // Si el ancho es menor o igual a 480px (móviles), se muestran 4 productos; de lo contrario, 16.
-let productsPerPage = window.innerWidth <= 480 ? 4 : 16;
+let productsPerPage = window.innerWidth <= 480 ? 4 : 8;
 let categoryPages = {}; // Página actual por categoría
 
 // Opciones de Fuse.js
