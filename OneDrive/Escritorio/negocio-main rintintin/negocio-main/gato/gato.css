@@ -65,12 +65,10 @@ body {
       =================================================== */
 
 .button-section {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-bottom: 2rem;
-    flex-wrap: wrap;
-    /* Permite que se ajusten en varias filas en pantallas pequeñas */
 }
 
 .filter-btn {
@@ -95,7 +93,7 @@ body {
          =================================================== */
 
 .header {
-    background-color: #252523;
+    background: linear-gradient(29deg, #fe5c35, #faae42);
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
@@ -146,7 +144,7 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
-    background-color: #ff7300;
+    background-color: #ffffff;
     border-radius: 0.5rem;
     color: black;
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -154,7 +152,7 @@ body {
 
 .navbar ul li a:hover {
     transform: scale(1.1);
-    background-color: #fe5800;
+    background-color: #000000;
     color: white;
 }
 
@@ -624,6 +622,12 @@ body {
     .carousel-row .product-card {
         width: 100% !important;
         max-width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-section {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

@@ -1,116 +1,1626 @@
 [{
-        "id": 1,
-        "categoryId": 1,
-        "name": "Collar para Perro",
-        "price": 45000,
-        "description": "Collar ajustable para perros pequeños y medianos",
-        "image": "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
+        "id": 231,
+        "categoryId": 6,
+        "name": "casa para gato",
+        "price": 150000,
+        "description": "casa para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag010.jpg",
         "gallery": [
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg",
-            "https://ae01.alicdn.com/kf/Hb74e6b70d11841379b0673bbacfbbf69P/Collar-ajustable-para-perro-y-gato-Collar-duradero-de-alta-calidad-a-la-moda-peque-os.jpg"
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag010.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag010.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag010.jpg"
         ]
     },
-    { "id": 2, "categoryId": 5, "name": "Correa para Perro", "price": 25000, "description": "Correa resistente de nylon", "image": "https://th.bing.com/th/id/R.d8d9acae7b5e907b3d617507fc89188c?rik=E9nJq3VYJdC4UA&pid=ImgRaw&r=0" },
-    { "id": 3, "categoryId": 5, "name": "Abrigo para Perro", "price": 80000, "description": "Abrigo impermeable para clima frío", "image": "https://via.placeholder.com/150?text=Abrigo" },
-    { "id": 4, "categoryId": 5, "name": "Zapatos para Perro", "price": 50000, "description": "Zapatos antideslizantes para perros", "image": "https://via.placeholder.com/150?text=Zapatos" },
-    { "id": 5, "categoryId": 5, "name": "Sombrero para Perro", "price": 30000, "description": "Sombrero divertido para perros", "image": "https://via.placeholder.com/150?text=Sombrero" },
-    { "id": 6, "categoryId": 5, "name": "Cama para Perro", "price": 150000, "description": "Cama cómoda y resistente", "image": "https://via.placeholder.com/150?text=Cama" },
-    { "id": 7, "categoryId": 51, "name": "Mochila para Perro", "price": 70000, "description": "Mochila ligera para perros", "image": "https://via.placeholder.com/150?text=Mochila" },
-    { "id": 8, "categoryId": 5, "name": "Pañuelo para Perro", "price": 20000, "description": "Pañuelo decorativo", "image": "https://via.placeholder.com/150?text=Pañuelo" },
-    { "id": 9, "categoryId": 5, "name": "Gafas para Perro", "price": 40000, "description": "Gafas de sol protectoras", "image": "https://via.placeholder.com/150?text=Gafas" },
-    { "id": 10, "categoryId": 5, "name": "Cepillo para Perro", "price": 25000, "description": "Cepillo para el pelo", "image": "https://via.placeholder.com/150?text=Cepillo" },
-    { "id": 11, "categoryId": 5, "name": "Bolsa de Transporte", "price": 80000, "description": "Bolsa para transportar perros pequeños", "image": "https://via.placeholder.com/150?text=Bolsa" },
-    { "id": 12, "categoryId": 5, "name": "Plato para Perro", "price": 20000, "description": "Plato resistente de acero inoxidable", "image": "https://via.placeholder.com/150?text=Plato" },
-    { "id": 13, "categoryId": 5, "name": "Juguete Mordedor", "price": 35000, "description": "Juguete resistente para morder", "image": "https://via.placeholder.com/150?text=Juguete" },
-    { "id": 14, "categoryId": 5, "name": "Arnés para Perro", "price": 60000, "description": "Arnés ajustable para perros", "image": "https://via.placeholder.com/150?text=Arnés" },
-    { "id": 15, "categoryId": 5, "name": "Botella de Agua Portátil", "price": 30000, "description": "Botella para hidratar a tu perro en paseos", "image": "https://via.placeholder.com/150?text=Botella" },
-    { "id": 16, "categoryId": 5, "name": "Bolsas para Desechos", "price": 10000, "description": "Bolsas biodegradables para desechos", "image": "https://via.placeholder.com/150?text=Bolsas" },
-    { "id": 17, "categoryId": 5, "name": "Chaleco Salvavidas", "price": 90000, "description": "Chaleco salvavidas para perros", "image": "https://via.placeholder.com/150?text=Chaleco" },
-    { "id": 18, "categoryId": 5, "name": "Rascador para Perro", "price": 55000, "description": "Rascador para aliviar picazón", "image": "https://via.placeholder.com/150?text=Rascador" },
-    { "id": 19, "categoryId": 5, "name": "Tazón Antideslizante", "price": 25000, "description": "Tazón que no se desliza mientras come", "image": "https://via.placeholder.com/150?text=Tazón" },
-    { "id": 20, "categoryId": 5, "name": "Snacks Saludables", "price": 20000, "description": "Snacks ricos y nutritivos", "image": "https://via.placeholder.com/150?text=Snacks" },
-    { "id": 21, "categoryId": 5, "name": "Kit de Limpieza", "price": 75000, "description": "Set completo para limpieza de perros", "image": "https://via.placeholder.com/150?text=Kit" },
-    { "id": 22, "categoryId": 5, "name": "Camisa para Perro", "price": 40000, "description": "Camisa cómoda y moderna", "image": "https://via.placeholder.com/150?text=Camisa" },
-    { "id": 23, "categoryId": 5, "name": "Cuerda para Perros", "price": 18000, "description": "Cuerda para juegos de tirón", "image": "https://via.placeholder.com/150?text=Cuerda" },
-    { "id": 24, "categoryId": 5, "name": "Tienda para Perros", "price": 120000, "description": "Casa portátil para perros", "image": "https://via.placeholder.com/150?text=Tienda" },
-    { "id": 25, "categoryId": 5, "name": "Juguete Interactivo", "price": 50000, "description": "Juguete para estimular la mente", "image": "https://via.placeholder.com/150?text=Interactivo" },
-    { "id": 26, "categoryId": 5, "name": "Disco Volador", "price": 30000, "description": "Juguete para lanzar y recoger", "image": "https://via.placeholder.com/150?text=Disco" },
-    { "id": 27, "categoryId": 5, "name": "Collar Antipulgas", "price": 55000, "description": "Collar que protege contra pulgas", "image": "https://via.placeholder.com/150?text=Antipulgas" },
-
-
-    { "id": 28, "categoryId": 6, "name": "Comida Premium para Perros", "price": 85000, "description": "Alimento de alta calidad para perros exigentes", "image": "https://via.placeholder.com/150?text=Comida+Premium" },
-    { "id": 29, "categoryId": 6, "name": "Snacks Saludables", "price": 45000, "description": "Bocadillos ricos y nutritivos para perros", "image": "https://via.placeholder.com/150?text=Snacks" },
-    { "id": 30, "categoryId": 6, "name": "Croquetas Húmedas", "price": 75000, "description": "Comida húmeda de calidad premium", "image": "https://via.placeholder.com/150?text=Croquetas" },
-    { "id": 31, "categoryId": 6, "name": "Barritas Masticables", "price": 55000, "description": "Barritas deliciosas para perros activos", "image": "https://via.placeholder.com/150?text=Barritas" },
-    { "id": 32, "categoryId": 6, "name": "Comida Especial para Cachorros", "price": 80000, "description": "Nutrición completa para los más pequeños", "image": "https://via.placeholder.com/150?text=Cachorros" },
-    { "id": 33, "categoryId": 6, "name": "Alimento Hipoalergénico", "price": 95000, "description": "Ideal para perros con sensibilidad alimentaria", "image": "https://via.placeholder.com/150?text=Hipoalergénico" },
-    { "id": 34, "categoryId": 6, "name": "Comida Baja en Grasa", "price": 70000, "description": "Para perros que necesitan controlar su peso", "image": "https://via.placeholder.com/150?text=Baja+Grasa" },
-    { "id": 35, "categoryId": 6, "name": "Comida Gourmet para Perros", "price": 100000, "description": "Una experiencia de sabor premium", "image": "https://via.placeholder.com/150?text=Gourmet" },
-    { "id": 36, "categoryId": 6, "name": "Croquetas Orgánicas", "price": 87000, "description": "Ingredientes 100% orgánicos y frescos", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-    { "id": 37, "categoryId": 6, "name": "Comida para Perros Senior", "price": 89000, "description": "Nutrición adaptada para perros mayores", "image": "https://via.placeholder.com/150?text=Senior" },
-    { "id": 38, "categoryId": 6, "name": "Comida Deshidratada", "price": 78000, "description": "Sabor y frescura en cada porción", "image": "https://via.placeholder.com/150?text=Deshidratada" },
-    { "id": 39, "categoryId": 6, "name": "Croquetas de Salmón", "price": 91000, "description": "Ricas en omega-3 para un pelaje brillante", "image": "https://via.placeholder.com/150?text=Salmón" },
-    { "id": 40, "categoryId": 6, "name": "Alimento para Perros Activos", "price": 83000, "description": "Energía para perros que se mueven mucho", "image": "https://via.placeholder.com/150?text=Activos" },
-    { "id": 41, "categoryId": 6, "name": "Comida Económica para Perros", "price": 45000, "description": "Calidad al mejor precio", "image": "https://via.placeholder.com/150?text=Económica" },
-    { "id": 42, "categoryId": 6, "name": "Snacks con Vitaminas", "price": 30000, "description": "Snacks enriquecidos para perros saludables", "image": "https://via.placeholder.com/150?text=Vitaminas" },
-    { "id": 43, "categoryId": 6, "name": "Alimento en Lata", "price": 56000, "description": "Comida húmeda de sabor irresistible", "image": "https://via.placeholder.com/150?text=Lata" },
-    { "id": 44, "categoryId": 6, "name": "Comida para Perros Grandes", "price": 85000, "description": "Raciones para razas grandes", "image": "https://via.placeholder.com/150?text=Grandes" },
-    { "id": 45, "categoryId": 6, "name": "Alimento para Razas Pequeñas", "price": 72000, "description": "Ideal para perros pequeños", "image": "https://via.placeholder.com/150?text=Pequeñas" },
-    { "id": 46, "categoryId": 6, "name": "Comida Balanceada", "price": 88000, "description": "Equilibrio perfecto de nutrientes", "image": "https://via.placeholder.com/150?text=Balanceada" },
-    { "id": 47, "categoryId": 6, "name": "Croquetas de Pollo", "price": 81000, "description": "El sabor favorito de todos los perros", "image": "https://via.placeholder.com/150?text=Pollo" },
-    { "id": 48, "categoryId": 6, "name": "Snack Masticable", "price": 27000, "description": "Entretenimiento y sabor", "image": "https://via.placeholder.com/150?text=Masticable" },
-    { "id": 49, "categoryId": 6, "name": "Comida Vegana", "price": 90000, "description": "Ideal para dueños y perros veganos", "image": "https://via.placeholder.com/150?text=Vegana" },
-    { "id": 50, "categoryId": 6, "name": "Barritas Orgánicas", "price": 39000, "description": "Barras saludables y deliciosas", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-    { "id": 51, "categoryId": 6, "name": "Bolsa Familiar de Comida", "price": 105000, "description": "Rendimiento para toda la familia canina", "image": "https://via.placeholder.com/150?text=Familiar" },
-
-    { "id": 52, "categoryId": 7, "name": "Comida Premium para Perros", "price": 85000, "description": "Alimento de alta calidad para perros exigentes", "image": "https://via.placeholder.com/150?text=Comida+Premium" },
-    { "id": 53, "categoryId": 7, "name": "Snacks Saludables", "price": 45000, "description": "Bocadillos ricos y nutritivos para perros", "image": "https://via.placeholder.com/150?text=Snacks" },
-    { "id": 54, "categoryId": 7, "name": "Croquetas Húmedas", "price": 75000, "description": "Comida húmeda de calidad premium", "image": "https://via.placeholder.com/150?text=Croquetas" },
-    { "id": 55, "categoryId": 7, "name": "Barritas Masticables", "price": 55000, "description": "Barritas deliciosas para perros activos", "image": "https://via.placeholder.com/150?text=Barritas" },
-    { "id": 56, "categoryId": 7, "name": "Comida Especial para Cachorros", "price": 80000, "description": "Nutrición completa para los más pequeños", "image": "https://via.placeholder.com/150?text=Cachorros" },
-    { "id": 57, "categoryId": 7, "name": "Alimento Hipoalergénico", "price": 95000, "description": "Ideal para perros con sensibilidad alimentaria", "image": "https://via.placeholder.com/150?text=Hipoalergénico" },
-    { "id": 58, "categoryId": 7, "name": "Comida Baja en Grasa", "price": 70000, "description": "Para perros que necesitan controlar su peso", "image": "https://via.placeholder.com/150?text=Baja+Grasa" },
-    { "id": 59, "categoryId": 7, "name": "Comida Gourmet para Perros", "price": 100000, "description": "Una experiencia de sabor premium", "image": "https://via.placeholder.com/150?text=Gourmet" },
-    { "id": 60, "categoryId": 7, "name": "Croquetas Orgánicas", "price": 87000, "description": "Ingredientes 100% orgánicos y frescos", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-    { "id": 61, "categoryId": 7, "name": "Comida para Perros Senior", "price": 89000, "description": "Nutrición adaptada para perros mayores", "image": "https://via.placeholder.com/150?text=Senior" },
-    { "id": 62, "categoryId": 7, "name": "Comida Deshidratada", "price": 78000, "description": "Sabor y frescura en cada porción", "image": "https://via.placeholder.com/150?text=Deshidratada" },
-    { "id": 63, "categoryId": 7, "name": "Croquetas de Salmón", "price": 91000, "description": "Ricas en omega-3 para un pelaje brillante", "image": "https://via.placeholder.com/150?text=Salmón" },
-    { "id": 64, "categoryId": 7, "name": "Alimento para Perros Activos", "price": 83000, "description": "Energía para perros que se mueven mucho", "image": "https://via.placeholder.com/150?text=Activos" },
-    { "id": 65, "categoryId": 7, "name": "Comida Económica para Perros", "price": 45000, "description": "Calidad al mejor precio", "image": "https://via.placeholder.com/150?text=Económica" },
-    { "id": 66, "categoryId": 7, "name": "Snacks con Vitaminas", "price": 30000, "description": "Snacks enriquecidos para perros saludables", "image": "https://via.placeholder.com/150?text=Vitaminas" },
-    { "id": 67, "categoryId": 7, "name": "Alimento en Lata", "price": 56000, "description": "Comida húmeda de sabor irresistible", "image": "https://via.placeholder.com/150?text=Lata" },
-    { "id": 68, "categoryId": 7, "name": "Comida para Perros Grandes", "price": 85000, "description": "Raciones para razas grandes", "image": "https://via.placeholder.com/150?text=Grandes" },
-    { "id": 69, "categoryId": 7, "name": "Alimento para Razas Pequeñas", "price": 72000, "description": "Ideal para perros pequeños", "image": "https://via.placeholder.com/150?text=Pequeñas" },
-    { "id": 70, "categoryId": 7, "name": "Comida Balanceada", "price": 88000, "description": "Equilibrio perfecto de nutrientes", "image": "https://via.placeholder.com/150?text=Balanceada" },
-    { "id": 71, "categoryId": 7, "name": "Croquetas de Pollo", "price": 81000, "description": "El sabor favorito de todos los perros", "image": "https://via.placeholder.com/150?text=Pollo" },
-    { "id": 72, "categoryId": 7, "name": "Snack Masticable", "price": 27000, "description": "Entretenimiento y sabor", "image": "https://via.placeholder.com/150?text=Masticable" },
-    { "id": 73, "categoryId": 7, "name": "Comida Vegana", "price": 90000, "description": "Ideal para dueños y perros veganos", "image": "https://via.placeholder.com/150?text=Vegana" },
-    { "id": 74, "categoryId": 7, "name": "Barritas Orgánicas", "price": 39000, "description": "Barras saludables y deliciosas", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-    { "id": 75, "categoryId": 7, "name": "Bolsa Familiar de Comida", "price": 105000, "description": "Rendimiento para toda la familia canina", "image": "https://via.placeholder.com/150?text=Familiar" },
-
-    { "id": 76, "categoryId": 8, "name": "Comida Premium para Perros", "price": 85000, "description": "Alimento de alta calidad para perros exigentes", "image": "https://via.placeholder.com/150?text=Comida+Premium" },
-    { "id": 77, "categoryId": 8, "name": "Snacks Saludables", "price": 45000, "description": "Bocadillos ricos y nutritivos para perros", "image": "https://via.placeholder.com/150?text=Snacks" },
-    { "id": 78, "categoryId": 8, "name": "Croquetas Húmedas", "price": 75000, "description": "Comida húmeda de calidad premium", "image": "https://via.placeholder.com/150?text=Croquetas" },
-    { "id": 79, "categoryId": 8, "name": "Barritas Masticables", "price": 55000, "description": "Barritas deliciosas para perros activos", "image": "https://via.placeholder.com/150?text=Barritas" },
-    { "id": 80, "categoryId": 8, "name": "Comida Especial para Cachorros", "price": 80000, "description": "Nutrición completa para los más pequeños", "image": "https://via.placeholder.com/150?text=Cachorros" },
-    { "id": 81, "categoryId": 8, "name": "Alimento Hipoalergénico", "price": 95000, "description": "Ideal para perros con sensibilidad alimentaria", "image": "https://via.placeholder.com/150?text=Hipoalergénico" },
-    { "id": 82, "categoryId": 8, "name": "Comida Baja en Grasa", "price": 70000, "description": "Para perros que necesitan controlar su peso", "image": "https://via.placeholder.com/150?text=Baja+Grasa" },
-    { "id": 83, "categoryId": 8, "name": "Comida Gourmet para Perros", "price": 100000, "description": "Una experiencia de sabor premium", "image": "https://via.placeholder.com/150?text=Gourmet" },
-    { "id": 84, "categoryId": 8, "name": "Croquetas Orgánicas", "price": 87000, "description": "Ingredientes 100% orgánicos y frescos", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-    { "id": 85, "categoryId": 8, "name": "Comida para Perros Senior", "price": 89000, "description": "Nutrición adaptada para perros mayores", "image": "https://via.placeholder.com/150?text=Senior" },
-    { "id": 86, "categoryId": 8, "name": "Comida Deshidratada", "price": 78000, "description": "Sabor y frescura en cada porción", "image": "https://via.placeholder.com/150?text=Deshidratada" },
-    { "id": 87, "categoryId": 8, "name": "Croquetas de Salmón", "price": 91000, "description": "Ricas en omega-3 para un pelaje brillante", "image": "https://via.placeholder.com/150?text=Salmón" },
-    { "id": 88, "categoryId": 8, "name": "Alimento para Perros Activos", "price": 83000, "description": "Energía para perros que se mueven mucho", "image": "https://via.placeholder.com/150?text=Activos" },
-    { "id": 89, "categoryId": 8, "name": "Comida Económica para Perros", "price": 45000, "description": "Calidad al mejor precio", "image": "https://via.placeholder.com/150?text=Económica" },
-    { "id": 90, "categoryId": 8, "name": "Snacks con Vitaminas", "price": 30000, "description": "Snacks enriquecidos para perros saludables", "image": "https://via.placeholder.com/150?text=Vitaminas" },
-    { "id": 91, "categoryId": 8, "name": "Alimento en Lata", "price": 56000, "description": "Comida húmeda de sabor irresistible", "image": "https://via.placeholder.com/150?text=Lata" },
-    { "id": 92, "categoryId": 8, "name": "Comida para Perros Grandes", "price": 85000, "description": "Raciones para razas grandes", "image": "https://via.placeholder.com/150?text=Grandes" },
-    { "id": 93, "categoryId": 8, "name": "Alimento para Razas Pequeñas", "price": 72000, "description": "Ideal para perros pequeños", "image": "https://via.placeholder.com/150?text=Pequeñas" },
-    { "id": 94, "categoryId": 8, "name": "Comida Balanceada", "price": 88000, "description": "Equilibrio perfecto de nutrientes", "image": "https://via.placeholder.com/150?text=Balanceada" },
-    { "id": 95, "categoryId": 8, "name": "Croquetas de Pollo", "price": 81000, "description": "El sabor favorito de todos los perros", "image": "https://via.placeholder.com/150?text=Pollo" },
-    { "id": 96, "categoryId": 8, "name": "Snack Masticable", "price": 27000, "description": "Entretenimiento y sabor", "image": "https://via.placeholder.com/150?text=Masticable" },
-    { "id": 97, "categoryId": 8, "name": "Comida Vegana", "price": 90000, "description": "Ideal para dueños y perros veganos", "image": "https://via.placeholder.com/150?text=Vegana" },
-    { "id": 98, "categoryId": 8, "name": "Barritas Orgánicas", "price": 39000, "description": "Barras saludables y deliciosas", "image": "https://via.placeholder.com/150?text=Orgánicas" },
-    { "id": 99, "categoryId": 8, "name": "Bolsa Familiar de Comida", "price": 105000, "description": "Rendimiento para toda la familia canina", "image": "https://via.placeholder.com/150?text=Familiar" }
+    {
+        "id": 232,
+        "categoryId": 6,
+        "name": "casa para gato",
+        "price": 150000,
+        "description": "casa para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag020.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag020.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag020.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/casag020.jpg"
+        ]
+    },
+    {
+        "id": 270,
+        "categoryId": 6,
+        "name": "juguete rayos laser para gato",
+        "price": 50000,
+        "description": "juguete rayos laser para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/toylaser00.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/toylaser00.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/toylaser00t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/toylaser00.jpg"
+        ]
+    },
+    {
+        "id": 271,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 27000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy01.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy01.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy01t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy01.jpg"
+        ]
+    },
+    {
+        "id": 272,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 27000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy02.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy02.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy02t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy02.jpg"
+        ]
+    },
+    {
+        "id": 273,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 27000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy03.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy03.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy03t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooy03.jpg"
+        ]
+    },
+    {
+        "id": 274,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 17500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya01.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya02.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya03t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya01.jpg"
+        ]
+    },
+    {
+        "id": 275,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 17500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya04.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya04.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya04t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/tooya04.jpg"
+        ]
+    },
+    {
+        "id": 276,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 16500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/16500.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/16500.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/16500t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/16500.jpg"
+        ]
+    },
+    {
+        "id": 277,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 13500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135001.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135001.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135001t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135001.jpg"
+        ]
+    },
+    {
+        "id": 278,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 13500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135002.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135002.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135002t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/135002.jpg"
+        ]
+    },
+    {
+        "id": 279,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 15000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A01.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A01.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A01t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A01.jpg"
+        ]
+    },
+    {
+        "id": 280,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 15000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A02.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A02.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A02t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A02.jpg"
+        ]
+    },
+    {
+        "id": 281,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 15000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A03.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A03.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A03t.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/15A03.jpg"
+        ]
+    },
+    {
+        "id": 282,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 20500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A1.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A1.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A1.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A1.jpg"
+        ]
+    },
+    {
+        "id": 283,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 20500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A2.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A2.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A2.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A2.jpg"
+        ]
+    },
+    {
+        "id": 284,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 20500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A3.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A3.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A3.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A3.jpg"
+        ]
+    },
+    {
+        "id": 285,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 20500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A4.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A4.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A4.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20500A4.jpg"
+        ]
+    },
+    {
+        "id": 286,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 22500,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/22500.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/22500.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/22500.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/22500.jpg"
+        ]
+    },
+    {
+        "id": 287,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 25000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A1.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A1.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A1.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A1.jpg"
+        ]
+    },
+    {
+        "id": 288,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 25000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A2.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A2.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A2.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A2.jpg"
+        ]
+    },
+    {
+        "id": 289,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 25000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A3.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A3.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A3.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A3.jpg"
+        ]
+    },
+    {
+        "id": 290,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 25000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A4.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A4.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A4.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A4.jpg"
+        ]
+    },
+    {
+        "id": 291,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 25000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A5.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A5.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A5.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/25A5.jpg"
+        ]
+    },
+    {
+        "id": 292,
+        "categoryId": 6,
+        "name": "juguete para gato",
+        "price": 50000,
+        "description": "juguete para gato ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/50.jpg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/50.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/50.jpg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/50.jpg"
+        ]
+    },
+    {
+        "id": 540,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato1.JPG"
+        ]
+    },
+    {
+        "id": 541,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato2.JPG"
+        ]
+    },
+    {
+        "id": 542,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato3.JPG"
+        ]
+    },
+    {
+        "id": 543,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato4.JPG"
+        ]
+    },
+    {
+        "id": 544,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato5.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato5.JPG"
+        ]
+    },
+    {
+        "id": 545,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato6.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato6.JPG"
+        ]
+    },
+    {
+        "id": 546,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato7.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato7.JPG"
+        ]
+    },
+    {
+        "id": 547,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato8.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato8.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato8.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato8.JPG"
+        ]
+    },
+    {
+        "id": 548,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato9.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato9.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato9.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato9.JPG"
+        ]
+    },
+    {
+        "id": 549,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato10.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato10.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato10.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato10.JPG"
+        ]
+    },
+    {
+        "id": 550,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato11.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato11.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato11.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato11.JPG"
+        ]
+    },
+    {
+        "id": 551,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato12.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato12.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato12.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012plato12.JPG"
+        ]
+    },
+    {
+        "id": 552,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 22000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato1.JPG"
+        ]
+    },
+    {
+        "id": 553,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 22000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato2.JPG"
+        ]
+    },
+    {
+        "id": 554,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 22000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato3.JPG"
+        ]
+    },
+    {
+        "id": 555,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 22000,
+        "description": "Plato de comida para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/022plato4.JPG"
+        ]
+    },
+    {
+        "id": 556,
+        "categoryId": 6,
+        "name": "Plato de comida para gato",
+        "price": 12000,
+        "description": "Plato de comida para gato  ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/mershopplato.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/mershopplato.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/mershopplato.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/mershopplato.JPG"
+        ]
+    },
+    {
+        "id": 557,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game1.JPG"
+        ]
+    },
+    {
+        "id": 558,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game2.JPG"
+        ]
+    },
+    {
+        "id": 559,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game3.JPG"
+        ]
+    },
+    {
+        "id": 560,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game4.JPG"
+        ]
+    },
+    {
+        "id": 561,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game5.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game5.JPG"
+        ]
+    },
+    {
+        "id": 562,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game6.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game6.JPG"
+        ]
+    },
+    {
+        "id": 563,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game7.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game7.JPG"
+        ]
+    },
+    {
+        "id": 564,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game8.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game8.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game8.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game8.JPG"
+        ]
+    },
+    {
+        "id": 565,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game9.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game9.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game9.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game9.JPG"
+        ]
+    },
+    {
+        "id": 566,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game10.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game10.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game10.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game10.JPG"
+        ]
+    },
+    {
+        "id": 567,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game11.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game11.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game11.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game11.JPG"
+        ]
+    },
+    {
+        "id": 568,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 12000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game12.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game12.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game12.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/012game12.JPG"
+        ]
+    },
+    {
+        "id": 569,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 20000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game1.JPG"
+        ]
+    },
+    {
+        "id": 570,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 20000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game2.JPG"
+        ]
+    },
+    {
+        "id": 571,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 20000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game3.JPG"
+        ]
+    },
+    {
+        "id": 572,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 20000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020game4.JPG"
+        ]
+    },
+    {
+        "id": 573,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 6000,
+        "description": "Jueguetes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/006game.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/006game.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/006game.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/006game.JPG"
+        ]
+    },
+    {
+        "id": 574,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 20000,
+        "description": "Jueguetes para gatos  ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20mershop.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20mershop.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20mershop.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/20mershop.JPG"
+        ]
+    },
+    {
+        "id": 575,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 6000,
+        "description": "Jueguetes para gatos  ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop1.JPG"
+        ]
+    },
+    {
+        "id": 576,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 6000,
+        "description": "Jueguetes para gatos  ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop2.JPG"
+        ]
+    },
+    {
+        "id": 577,
+        "categoryId": 6,
+        "name": "Jueguetes para gatos",
+        "price": 6000,
+        "description": "Jueguetes para gatos  ms",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/12mershop3.JPG"
+        ]
+    },
+    {
+        "id": 578,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 20000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp1.JPG"
+        ]
+    },
+    {
+        "id": 579,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 20000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp2.JPG"
+        ]
+    },
+    {
+        "id": 580,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 20000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp3.JPG"
+        ]
+    },
+    {
+        "id": 581,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 20000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp4.JPG"
+        ]
+    },
+    {
+        "id": 582,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 20000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp5.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp5.JPG"
+        ]
+    },
+    {
+        "id": 583,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 20000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp6.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/020cepp6.JPG"
+        ]
+    },
+    {
+        "id": 584,
+        "categoryId": 6,
+        "name": "Camas para gatos",
+        "price": 20000,
+        "description": "Camas para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp1.JPG"
+        ]
+    },
+    {
+        "id": 585,
+        "categoryId": 6,
+        "name": "Camas para gatos",
+        "price": 20000,
+        "description": "Camas para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp2.JPG"
+        ]
+    },
+    {
+        "id": 586,
+        "categoryId": 6,
+        "name": "Camas para gatos",
+        "price": 20000,
+        "description": "Camas para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp3.JPG"
+        ]
+    },
+    {
+        "id": 587,
+        "categoryId": 6,
+        "name": "Camas para gatos",
+        "price": 20000,
+        "description": "Camas para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060cepp4.JPG"
+        ]
+    },
+    {
+        "id": 588,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 35000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp1.JPG"
+        ]
+    },
+    {
+        "id": 589,
+        "categoryId": 6,
+        "name": "Cepillo para gatos",
+        "price": 35000,
+        "description": "Cepillo para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035cepp2.JPG"
+        ]
+    },
+    {
+        "id": 590,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 85000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente1.JPG"
+        ]
+    },
+    {
+        "id": 591,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 85000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente2.JPG"
+        ]
+    },
+    {
+        "id": 592,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 85000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente3.JPG"
+        ]
+    },
+    {
+        "id": 593,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 85000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/085fuente4.JPG"
+        ]
+    },
+    {
+        "id": 594,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 35000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee1.JPG"
+        ]
+    },
+    {
+        "id": 595,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 35000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee2.JPG"
+        ]
+    },
+    {
+        "id": 596,
+        "categoryId": 6,
+        "name": "Fuente para gatos",
+        "price": 35000,
+        "description": "Fuente para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/035fuentee3.JPG"
+        ]
+    },
+    {
+        "id": 597,
+        "categoryId": 6,
+        "name": "Fuentes para gatos",
+        "price": 60000,
+        "description": "Fuentes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee1.JPG"
+        ]
+    },
+    {
+        "id": 598,
+        "categoryId": 6,
+        "name": "Fuentes para gatos",
+        "price": 60000,
+        "description": "Fuentes para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/060fuentee2.JPG"
+        ]
+    },
+    {
+        "id": 599,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere1.JPG"
+        ]
+    },
+    {
+        "id": 600,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere2.JPG"
+        ]
+    },
+    {
+        "id": 601,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere3.JPG"
+        ]
+    },
+    {
+        "id": 602,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere4.JPG"
+        ]
+    },
+    {
+        "id": 603,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere5.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere5.JPG"
+        ]
+    },
+    {
+        "id": 604,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere6.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere6.JPG"
+        ]
+    },
+    {
+        "id": 605,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere7.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere7.JPG"
+        ]
+    },
+    {
+        "id": 606,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere8.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere8.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere8.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere8.JPG"
+        ]
+    },
+    {
+        "id": 607,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere9.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere9.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere9.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere9.JPG"
+        ]
+    },
+    {
+        "id": 608,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere10.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere10.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere10.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere10.JPG"
+        ]
+    },
+    {
+        "id": 609,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere11.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere11.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere11.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere11.JPG"
+        ]
+    },
+    {
+        "id": 610,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere12.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere12.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere12.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere12.JPG"
+        ]
+    },
+    {
+        "id": 611,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere13.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere13.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere13.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere13.JPG"
+        ]
+    },
+    {
+        "id": 612,
+        "categoryId": 6,
+        "name": "Collares para gatos",
+        "price": 60000,
+        "description": "Collares para gatos  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere14.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere14.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere14.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/040collere14.JPG"
+        ]
+    },
+    {
+        "id": 613,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara1.JPG"
+        ]
+    },
+    {
+        "id": 614,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara2.JPG"
+        ]
+    },
+    {
+        "id": 615,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara3.JPG"
+        ]
+    },
+    {
+        "id": 616,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara4.JPG"
+        ]
+    },
+    {
+        "id": 617,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara5.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara5.JPG"
+        ]
+    },
+    {
+        "id": 618,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara6.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara6.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara6.JPG"
+        ]
+    },
+    {
+        "id": 619,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 45000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara7.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara7.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/045gaara7.JPG"
+        ]
+    },
+    {
+        "id": 620,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 50000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara1.JPG"
+        ]
+    },
+    {
+        "id": 621,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 50000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara2.JPG"
+        ]
+    },
+    {
+        "id": 622,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 50000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara3.JPG"
+        ]
+    },
+    {
+        "id": 623,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 50000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara4.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara4.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara4.JPG"
+        ]
+    },
+    {
+        "id": 624,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 50000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara5.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara5.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/050gaara5.JPG"
+        ]
+    },
+    {
+        "id": 625,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 55000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara1.JPG"
+        ]
+    },
+    {
+        "id": 626,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 55000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara2.JPG"
+        ]
+    },
+    {
+        "id": 627,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 55000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/055gaara3.JPG"
+        ]
+    },
+    {
+        "id": 628,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 80000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara1.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara1.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara1.JPG"
+        ]
+    },
+    {
+        "id": 629,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 80000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara2.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara2.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara2.JPG"
+        ]
+    },
+    {
+        "id": 630,
+        "categoryId": 6,
+        "name": "Arenera para gato",
+        "price": 80000,
+        "description": "Arenera para gato  vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara3.JPG",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara3.JPG",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/080gaara3.JPG"
+        ]
+    },
+    {
+        "id": 815,
+        "categoryId": 6,
+        "name": "Laser para gatos",
+        "price": 13000,
+        "description": "Laser para gatos vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/013gamm1.jpeg",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/013gamm1.jpeg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/013gamm2.jpeg",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/013gamm1.jpeg"
+        ]
+    },
+    {
+        "id": 818,
+        "categoryId": 6,
+        "name": "Freemiau Arena Absorvente para gato",
+        "price": 65100,
+        "description": "Freemiau Arena Absorvente para gato vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free1.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free1.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free1.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free1.png"
+        ]
+    },
+    {
+        "id": 819,
+        "categoryId": 6,
+        "name": "Petus Arena sanitaria para gatos",
+        "price": 26250,
+        "description": "Petus Arena sanitaria para gatos vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free2.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free2.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free2.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free2.png"
+        ]
+    },
+    {
+        "id": 820,
+        "categoryId": 6,
+        "name": "Freemiau Arena sanitaria absorbente para gato",
+        "price": 30450,
+        "description": "Freemiau Arena sanitaria absorbente para gato vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free3.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free3.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free3.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free3.png"
+        ]
+    },
+    {
+        "id": 822,
+        "categoryId": 6,
+        "name": "Foficat Arena para gato",
+        "price": 49350,
+        "description": "Foficat Arena para gato vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free5.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free5.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free5.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free5.png"
+        ]
+    },
+    {
+        "id": 823,
+        "categoryId": 6,
+        "name": "Freemiau Arena para gato",
+        "price": 26250,
+        "description": "Freemiau Arena para gato vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free6.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free6.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free6.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000free6.png"
+        ]
+    },
+    {
+        "id": 824,
+        "categoryId": 6,
+        "name": "Mirringo Arena para gatos con agradable aroma",
+        "price": 55650,
+        "description": "Mirringo Arena para gatos con agradable aroma vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd1.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd1.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd1.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd1.png"
+        ]
+    },
+    {
+        "id": 825,
+        "categoryId": 6,
+        "name": "King Cat arena para gatos",
+        "price": 94500,
+        "description": "King Cat arena para gatos vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd2.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd2.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd2.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd2.png"
+        ]
+    },
+    {
+        "id": 826,
+        "categoryId": 6,
+        "name": "gatissimo arena 25kg",
+        "price": 105000,
+        "description": "gatissimo arena 25kg vp",
+        "image": "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd3.png",
+        "gallery": [
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd3.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd3.png",
+            "https://images-pets.s3.us-east-2.amazonaws.com/imagenes/000catsd3.png"
+        ]
+    }
 ]
